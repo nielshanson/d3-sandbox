@@ -1,0 +1,141 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript" src="d3.v2.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+	<title>test</title>
+	
+</head>
+
+<body>
+    <div id="table">
+    </div>
+    <script type="text/javascript">
+                
+                d3.text("Thisone.csv", function(datasetText) {
+
+                var parsedCSV = d3.csv.parseRows(datasetText);
+                
+                // parse out x and y axis labels
+                var xlab = parsedCSV[0].slice(1,parsedCSV[0].length);
+                var ylab = [];
+                for(var i = 1; i < parsedCSV.length; i++){
+                    var temp = parsedCSV[i];
+                    ylab = ylab.concat(temp[0]);
+                }
+                // parse out the datamatrix
+                var data_matrix = [];
+                for(var i = 1; i < parsedCSV.length; i++){
+                    var temp = parsedCSV[i].slice(1,parsedCSV[i].length );
+                    data_matrix = data_matrix.concat([temp]);
+                }
+                
+                // find marginal sums
+                var sum_rows = []; // sum of the rows
+                for(var i = 0; i < data_matrix.length; i++){
+                    var temp_sum = 0;
+                    for(var j = 0; j < data_matrix[i].length; j++){
+                        temp_sum = parseFloat(temp_sum) + parseFloat(data_matrix[i][j]);
+                    }
+                    sum_rows = sum_rows.concat([temp_sum]);
+                }
+                
+                var sum_col = []; // sum of the columns
+                for(var i = 0; i < data_matrix[0].length; i++){
+                    var temp_sum = 0;
+                    for(var j = 0; j < data_matrix.length; j++){
+                        temp_sum = parseFloat(temp_sum) + parseFloat(data_matrix[j][i]);
+                    }
+                    sum_col = sum_col.concat([temp_sum]);
+                }                    
+
+                var margin = {top: 160, right: 160, bottom: 80, left: 160},
+                    width = data_matrix[1].length*12;
+                    height = data_matrix.length*12;                    
+                    
+                var svg = d3.select("#table").append("svg");
+                    svg.attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .style("border-collapse", "collapse")
+                    .style("border", "2px black solid")
+                    .append("g")
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+                    .selectAll("g")
+                    .data(data_matrix)
+                    .enter()
+                    .append("g")
+                    .attr("class", "row")
+                    .attr("transform", function(d, i){ return "translate(0," + (i*12) + ")"; })
+                    
+                    .selectAll("circle")
+                    .data(function(d){return d;})
+                    .enter().append("circle")
+                    .attr("r", function(d) {
+                        return d*0.75;
+                    })
+                    .attr("fill", function(d) {
+                        return colorPicker(d);
+                    })
+                    .attr("cx", function(d,i) {
+                        return (i * 25);
+                    })
+                    //.on("mouseover", function(){d3.select(this).attr("fill", "#F77E1C")})
+                    .on("mouseout", function(){d3.select(this).attr("fill", function(d) {
+                        return colorPicker(d);
+                    })})
+                    .on("mousedown", function(){d3.select(this).attr("fill", "red")})
+                    .attr("onclick", "javascript:showBlast('MMGA_0001')")               
+                    .attr("onclick", function(d,i,j) {
+                        var temp1 = xlab[i];
+                        var temp2 = ylab[j];
+                        return "javascript: showBlast('" + temp1 +"', " + "'" + temp2 + "')";
+                    })
+                    .attr("alt", function(d) {
+                        return d;
+                    })
+                    // axis
+                    var xScale = d3.scale.ordinal()
+                                          .domain(xlab)
+                                          .rangePoints([0+5, width-5]);
+                    var xAxis = d3.svg.axis()
+                                        .scale(xScale)
+                                        .orient("left")
+                                        
+                    var yScale = d3.scale.ordinal()
+                                         .domain(ylab)
+                                         .rangePoints([0+4, height-4]);
+                    var yAxis = d3.svg.axis()
+                                       .scale(yScale)
+                                       .orient("left")                    
+                    svg.append("g")
+                        .attr("class", "axis")
+                        .attr("transform", "translate("+ margin.left + "," + (margin.top + height) + ") rotate(270)")
+                        .call(xAxis);
+                        
+                    svg.append("g")
+                        .attr("class", "axis")
+                        .attr("transform", "translate("+ (margin.left -2) + "," + margin.top + ") rotate(0)")
+                        .call(yAxis);
+                        
+            });
+            
+            d3.select("#order").on("change", function() {
+              clearTimeout(timeout);
+              order(this.value);
+            });
+            
+            function order(value) {
+              x.domain(orders[value]);
+
+              var t = svg.transition().duration(2500);
+
+              t.selectAll(".row")
+                  .delay(function(d, i) { return x(i) * 4; })
+                  .attr("transform", function(d, i) { return "translate(0," + x(i) + ")"; })
+
+            }
+
+
+        </script>
+</body>
+</html>

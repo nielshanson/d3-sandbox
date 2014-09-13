@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.bar {
+  /* bar color */
+  fill: steelblue;
+}
+
+.xlabel {
+	/* label font color */
+	font: 12px sans-serif;
+}
+
+.axis text {
+  /* axis font */	
+  font: 10px sans-serif;
+}
+
+.values{
+  /* value labels next to bars */	
+  font: 10px sans-serif;
+  fill: black;
+  text-anchor: start; /* important for spacing */
+}
+
+.axis path,
+.axis line {
+  /* styles for axes */
+  fill: none;
+  stroke-width: 1;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+</style>
+
+<svg class="chart"></svg>
+
+<script src="d3.v3.min.js"></script>
+<script>
+
+
+// global parameters to set from outside
+var data_file = "data.tsv"; // data file
+var abs_width = 300; // absolute width in pixels
+var abs_height = 400; // absolute height in pixels
+var x_axis_label = "Count"; // xaxis label
+var xaxis_label_room = 20; // space at the bottom for label
+var text_letter_width = 3;  // pixels per letter for left margin
+var num_ticks_x = 5; // number of ticks on x axis
+
+// load data and draw plot
+d3.tsv(data_file, type, function(error, data) {
+  
+  // get longest data length to update margin
+  var max_length = d3.max(data, function(d) { return d.name.length; });
+  var text_margin = ( text_letter_width * max_length);
+  
+  // set margins
+  margin = {top: 20, right: 30 , bottom: (30 + xaxis_label_room), left: (40 + text_margin) };
+  width = abs_width - margin.left - margin.right; // width of plot
+  height = abs_height - margin.top - margin.bottom; // height of plot
+  
+  // create x range
+  var x = d3.scale.linear()
+      .range([2, width]); // start just off the line
+  
+  // create y range
+  var y = d3.scale.ordinal()
+      .rangeRoundBands([0, height], .1);
+  
+  // format x axis
+  var xAxis = d3.svg.axis()
+      .scale(x)
+	  .ticks(num_ticks_x)
+	  .outerTickSize(0)
+      .orient("bottom");
+  
+  // format y axis
+  var yAxis = d3.svg.axis()
+      .scale(y)
+	  .outerTickSize(0)
+      .orient("left");
+  
+  // set x and y to their domains
+  x.domain([0, d3.max(data, function(d) { return d.value; })]);
+  y.domain(data.map(function(d) { return d.name; }));
+  
+  // create the svg object
+  chart = d3.select(".chart")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  
+  // attach the x axis
+  chart.append("g")
+      .attr("class", "x axis")
+	  .attr("transform", "translate(0," + (height + 2) + ")")
+      .call(xAxis);
+  
+  // attach the y axis
+  chart.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+ 
+   // Draw X-axis grid lines
+   chart.selectAll("line.x")
+   .data(x.ticks(num_ticks_x))
+   .enter().append("line")
+   .attr("class", "x")
+   .attr("x1", x)
+   .attr("x2", x)
+   .attr("y1", 0)
+   .attr("y2", height)
+   .style("stroke", "#ccc");
+   
+   // Draw the bars
+   chart.selectAll(".bar")
+      .data(data)
+      .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return 2; }) // return x values just off line
+      .attr("y", function(d) { return y(d.name); })
+      .attr("height", y.rangeBand() )
+      .attr("width", function(d) { return x(d.value)-2; }); // correction for above
+  
+  // Draw the numbers next to each bar
+  chart.selectAll("bar")
+      .data(data)
+	  .enter().append("text")
+	  .attr("class", "values")
+	  .attr("x", function(d) { return x(d.value) + 5; })
+	  .attr("y", function(d) { return y(d.name); })
+	  .attr("dy", y.rangeBand()/1.5)
+	  .text(function(d) { return d.value; });
+  
+  // Draw the xaxis label 
+  chart.append("text")
+       .attr("class", "xlabel")
+	   .attr("x", width - 50)
+	   .attr("y", abs_height - (margin.bottom /1.4))
+	   .text(x_axis_label)
+  
+});
+
+// correction function for parse 
+function type(d) {
+  d.value = +d.value; // coerce to number
+  return d;
+}
+
+</script>
