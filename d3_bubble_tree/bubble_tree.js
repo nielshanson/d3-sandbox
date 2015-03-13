@@ -139,28 +139,8 @@ d3.json("data/WL_ISA_Bubble_Chart-1-1.json", function(json) {
         	return d
         });
 	              
-  
-  // alert(sample_names);
-  // alert(sumCounts(root));
-  // alert(sumCountsBySample(root, 1));
-  // alert(sumCountsBySample(root, 2));
-  // alert(sumCountsBySample(root, 3));
-  // set_children_leaves(root);
   toggle(root);
-  //console.log(root);
-  //toggle(root.children[1]);
-  //toggle(root.children[1].children[2]);
-  //toggle_leaf(root.children[1].children[2]);
-  //toggle(root.children[9]);
-  //toggle(root.children[9].children[0]);
-  //toggle_leaf(root.children[9].children[0]);
   update(root);
-  
-  // debug: print leaf nodes
-  // children_list = root.children;
-  // for (i = 0; i < children_list.length; i++) {
-  // 	  	alert(children_list[i]._leaf);
-  // }
   
 });
 
@@ -333,47 +313,6 @@ function initializeLeaves(d) {
   }
 }
 
-// sums all values below
-// function sumCounts(d) {
-// 	if (d.children) {
-// 		values = d.children.map(sumCounts);
-// 		sum = 0;
-// 		for (itr = 0; itr < values.length; itr++) {
-// 			sum += values[itr];
-// 		}
-// 		if(d.values) {
-// 			counts = d.values.map(parseFloat);
-// 			for (itr = 0; itr < counts.length; itr++) {
-// 				sum += counts[itr];
-// 			}
-// 		}
-// 		return(sum);
-// 	} else if (d._children) {
-// 		values = d._children.map(sumCounts);
-// 		sum = 0;
-// 		for (itr = 0; itr < values.length; itr++) {
-// 			sum += values[itr];
-// 		}
-// 		if(d.values) {
-// 			counts = d.values.map(parseFloat);
-// 			for (itr = 0; itr < counts.length; itr++) {
-// 				sum += counts[itr];
-// 			}
-// 		}
-// 		return(sum);
-// 	} else {
-// 		if(d.values) {
-// 			counts = d.values.map(parseFloat);
-// 			sum = 0;
-// 			for (itr = 0; itr < counts.length; itr++) {
-// 				sum += counts[itr];
-// 			}
-// 			return(sum);
-// 		}
-// 	}
-//
-// }
-
 function sumCountsBySample2(d, sample){
 	if (d.children) {
 		var sum = 0;
@@ -405,65 +344,6 @@ function sumCountsBySample2(d, sample){
 	}
 }
 
-// function sumCountsBySample(d) {
-// 	if (d.children) {
-// 		values = d.children.map(sumCountsBySample);
-// 		//alert(values.length + " " + values);
-// 		//alert(values[0]);
-// 		len = values[0].length;
-// 		//alert(len);
-// 		sums = [];
-// 		for (itr3 = 0; itr3 < len; itr3++) {
-// 			sums[itr3] = 0;
-// 		}
-//
-// 		for(itr = 0; itr < values.length; itr++) {
-// 			for (itr2 = 0; itr2 < len; itr2++) {
-// 				//sums[itr2] += values[itr][itr2];
-// 				sums[itr2] += values[itr][itr2];
-// 			}
-// 		}
-// 		// alert(sums);
-// 		if(d.values) {
-// 			counts = d.values.map(parseFloat);
-// 			for (itr = 0; itr < counts.length; itr++) {
-// 				sums[itr] += counts[itr];
-// 			}
-// 		}
-// 		// alert(sums);
-// 		return(sums);
-// 	} else if (d._children) {
-// 		values = d._children.map(sumCountsBySample);
-// 		//alert(values.length + " " + values);
-// 		len = values[0].length;
-// 		//alert(len);
-// 		sums = [];
-// 		for (itr3 = 0; itr3 < len; itr3++) {
-// 			sums[itr3] = 0;
-// 		}
-//
-// 		for(itr = 0; itr < values.length; itr++) {
-// 			for (itr2 = 0; itr2 < len; itr2++) {
-// 				//sums[itr2] += values[itr][itr2];
-// 				sums[itr2] += values[itr][itr2];
-// 			}
-// 		}
-// 		if(d.values) {
-// 			counts = d.values.map(parseFloat);
-// 			for (itr = 0; itr < counts.length; itr++) {
-// 				sums[itr] += counts[itr];
-// 			}
-// 		}
-// 		// alert(sums);
-// 		return(sums);
-// 	} else {
-// 		if(d.values) {
-// 			counts = d.values.map(parseFloat);
-// 			return(counts);
-// 		}
-// 	}
-// }
-
 function hideChildren(d) {
 	if(d.children) {
 	    d._children = d.children;
@@ -479,18 +359,6 @@ function toggle_leaf(d) {
 	} else {
 		d._leaf = true;
 	}
-}
-
-// Not sure what this function does
-function create_slices(nodeEnter) {
-  for (itr4 = 0; itr4 < samples; itr4++) {
-  	  nodeEnter.append("circle")
-  	  .style("fill", colors[itr4])
-  	  .attr("class", "slice")
-  };
-  
-  nodeEnter.select()
-
 }
 
 function create_leaf_nodes(nodeEnter) {
@@ -522,30 +390,5 @@ function update_leaf_nodes(nodeUpdate) {
 						  }
 						  
 					  });
-// 	    leaf_circles.attr("r", function(d) {
-// 								  if (d._leaf) {
-// 									  if (d.values) {
-// 									  	  return(radius(parseFloat(sumCountsBySample(d,itr3))));
-// 									  } else {
-// 										  return (1e-6);
-// 									  }
-// 								  } else {
-// 									  return (1e-6);
-// 								  }
-// 							    })
-// 	                 .attr("opacity", function(d) {
-// 										  if (d._leaf) {
-// 											  if (d.values) {
-// 											  	  if (parseFloat(sumCountsBySample(d,itr3)) > 0) {
-// 													  return(1);
-// 											  	  }
-// 											  } else {
-// 												  return (0);
-// 											  }
-// 										  } else {
-// 											  return (0);
-// 										  }
-// 									  })
-// 	              .style("fill", function(d) { return d._leaf ? colors[itr3] : "#fff"; });
-// 	}
+
 }

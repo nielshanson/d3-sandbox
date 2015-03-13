@@ -62,7 +62,7 @@ svg.append("path")
 
 
 // display the world
-d3.json("world.json", function(error, world) {
+d3.json("map_data/world.json", function(error, world) {
   if (error) return console.error(error);
   
   var subunits = topojson.feature(world, world.objects.subunits);
@@ -87,18 +87,6 @@ d3.json("world.json", function(error, world) {
       // parse the bubble data
       d3.text("imgm_bubble_data.csv", function(text) {
           var bubble_data = d3.csv.parse(text);
-              // res = {
-              //     name: d.name,
-              //     radius: +d.radius,
-              //     fillKey: d.fillKey,
-              //     latitude: +d.latitude,
-              //     longitude: +d.longitude
-              // };
-              // return res;
-              // }, function(error, rows) {
-              //    console.log(rows);
-              // });
-          console.log(bubble_data);
           plot_bubbles(bubble_data);
       });
   

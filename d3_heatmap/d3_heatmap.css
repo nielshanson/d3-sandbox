@@ -1,0 +1,42 @@
+body {
+    background-color: white;
+    color: black;
+	font-family: Garamond, serif;
+}
+
+p.first {
+	text-indent: 0px;
+    font-size: 20px;
+    line-height: 14px;
+    color: black;
+	margin:10px 5px 10px
+}
+p {
+	text-indent: 10px;
+    font-size: 20px;
+    line-height: 14px;
+    color: black;
+	margin:10px 5px 10px
+}
+
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   /* We'll override this later */
+    background-color: teal;
+}
+
+.background {
+  fill: #eee;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}

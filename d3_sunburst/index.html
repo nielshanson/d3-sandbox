@@ -1,58 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <title>Global Study D3 | Sunburst Plot</title>
-    
-    <!-- Bootstrap core CSS -->
-    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="../../css/starter-template.css" rel="stylesheet">
-    <link href="../../css/figure-align.css" rel="stylesheet">
-    
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="sequences.css"/>
+    <link rel="stylesheet" type="text/css" href="d3_sunburst.css"/>
     <link rel="stylesheet" type="text/css"
       href="http://cdn.datatables.net/1.10.5/css/jquery.dataTables.css"/>
     <script src="run_datatable.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Global Study</a>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="../..">Home</a></li>
-          <li><a href="../../pages/d3_worldmap">World Map</a></li>
-          <li class="active"><a href="../../pages/d3_sunburst">Sunburst Plot</a></li>
-		  <li><a href="../../pages/d3_bubble_tree">Bubble Tree</a></li>	
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-    </nav>
-    
-    <div class="container">
-        <div class="span12 page-header">
-        <h1>Sunburst Plot</h1>
-        </div>
         <div id="figure">
             <div class="sunburst_plot">
                 <div id="main">
@@ -73,13 +32,11 @@
                 </div>
             </div>
             <div id="demo"></div>
-            <script type="text/javascript" src="sequences.js"></script>
+            <script type="text/javascript" src="d3_sunburst.js"></script>
             <script type="text/javascript">
-              // Hack to make this example display correctly in an iframe on bl.ocks.org
-              d3.select(self.frameElement).style("height", "700px");
+              d3.select(self.frameElement).style("height", "1500px");
             </script>
         </div>
-        
     </div>
   </body>
 </html>

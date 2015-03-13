@@ -1,0 +1,4 @@
+
+# large blast-related files to ignore
+data/blast_outputs
+data/test.db
