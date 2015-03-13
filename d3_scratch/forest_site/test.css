@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+    color: black;
+	font-family: Garamond, serif;
+}
+
+p.first {
+	text-indent: 0px;
+    font-size: 20px;
+    line-height: 14px;
+    color: black;
+	margin:10px 5px 10px
+}
+p {
+	text-indent: 10px;
+    font-size: 20px;
+    line-height: 14px;
+    color: black;
+	margin:10px 5px 10px
+}
+
+/*body {font:20px/1.4 'Garamond', serif; background:#eee; height:100%; margin:25px 0; padding:0}
+h1 {font:50px 'Garamond', serif; margin:0}
+h2 {font-size:30px; font-weight:normal; font-style:italic; margin:0 0 20px}
+p {margin:0 0 14px}
+ul {margin:0; padding-left:20px}
+#testdiv {width:600px; margin:0px auto; border:1px solid #ccc; padding:20px 25px 12px; background:#fff}
+ul {list-style:none; margin-bottom:12px; padding:0}
+li {font:20px 'Garamond', serif; margin-bottom:4px; padding:8px 10px 9px; border:1px solid #ccc; background:#eee; cursor:pointer}
+li:hover {border:1px solid #bbb; background:#e3e3e3}*/
+
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   /* We'll override this later */
+    background-color: teal;
+}
+
+.background {
+  fill: #eee;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}

@@ -1,0 +1,359 @@
+<html>
+    <head>
+        <title>Horizon Taxonomy</title>
+        <!--<script type="text/javascript" src="test.js"></script> -->
+        <script type="text/javascript" src="d3.v2.js"></script>
+        <script type="text/javascript" src="test.js"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="test.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" language="javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="container" style="width:700px; margin:0 auto;">
+        <h1>Horizon Taxonomy</h1>
+        <div><p>Sorting: 
+            <select id="order">
+              <option value="hallam">Tree Of Life</option>
+              <option value="abundance">Average Abundance</option>
+            </select>
+            </p>
+        </div>
+                <div id="table">
+                </div>
+                <p><strong>Figure 1</strong> - Taxonomic distribution.
+                </p>
+ 
+        <script type="text/javascript">
+                    
+                    // input parameters
+                    var filename = "WL_ACTUALLY_DIVERSITY_Good_Names.csv";
+                    var orders_bars = {
+                      hallam: new Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+                      abundance: new Array(0,168,360,132,156,240,336,276,216,120,228,264,0,300,552,312,312,-132,456,-36,96,-204,-48,-168,-36,-264,-36,-300,-204,24,-72,-312,-60,-312,72,96,-276,-24,-216,-36,-384,168,192,60,36,144,-540,-444,24,-144,36,-60,-84,-48,0,-36,-60,-420,12,-180,-252,0)
+                    };
+                    
+                    var orders_rows = {
+                      hallam: new Array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68),
+                      abundance: new Array(0,15,32,14,17,25,34,30,26,19,29,33,12,38,60,41,42,6,56,16,28,4,18,9,21,3,23,2,11,31,24,5,27,7,40,43,13,35,20,36,8,55,58,48,47,57,1,10,50,37,53,46,45,49,54,52,51,22,59,44,39,61,59,64,60,42,66,37,62)
+                    };
+                    
+                    // size parameters
+                    var h_spacing = 20; // horizontal spacing
+                    var v_spacing = 12; // vertical spacing
+                    var margin = {top: 160, right: 160, bottom: 20, left: 160};
+                    var circle_factor = 0.5; //radius of circles relative to data point magnitude
+                     
+                    var x = d3.scale.ordinal().rangeBands([0, 300]);
+                    
+                    d3.text(filename, function(datasetText) {
+ 
+                    var parsedCSV = d3.csv.parseRows(datasetText);
+                    
+                    // parse out x and y axis labels
+                    var xlab = parsedCSV[0].slice(1,parsedCSV[0].length);
+                    var ylab = [];
+                    for(var i = 1; i < parsedCSV.length; i++){
+                        var temp = parsedCSV[i];
+                        ylab = ylab.concat(temp[0]);
+                    }
+                    // parse out the datamatrix
+                    var data_matrix = [];
+                    for(var i = 1; i < parsedCSV.length; i++){
+                        var temp = parsedCSV[i].slice(1,parsedCSV[i].length );
+                        data_matrix = data_matrix.concat([temp]);
+                    }
+                    // find marginal sums
+                    var sum_rows = []; // sum of the rows
+                    for(var i = 0; i < data_matrix.length; i++){
+                        var temp_sum = 0;
+                        for(var j = 0; j < data_matrix[i].length; j++){
+                            temp_sum = parseFloat(temp_sum) + parseFloat(data_matrix[i][j]);
+                        }
+                        sum_rows = sum_rows.concat([temp_sum]);
+                    }
+                    var sum_col = []; // sum of the columns
+                    for(var i = 0; i < data_matrix[0].length; i++){
+                        var temp_sum = 0;
+                        for(var j = 0; j < data_matrix.length; j++){
+                            temp_sum = parseFloat(temp_sum) + parseFloat(data_matrix[j][i]);
+                        }
+                        sum_col = sum_col.concat([temp_sum]);
+                    }
+                    
+                    // find marginal averages
+                    var avg_rows = []; // avg of columns
+                    for(var i = 0; i < data_matrix.length; i++){
+                        var temp_sum = 0;
+                        for(var j = 0; j < data_matrix[i].length; j++){
+                            temp_sum = parseFloat(temp_sum) + parseFloat(data_matrix[i][j]);
+                        }
+                        avg_rows = avg_rows.concat([temp_sum]/xlab.length);
+                    }
+
+                    var avg_col = []; // avg of columns
+                    for(var i = 0; i < data_matrix[0].length; i++){
+                        var temp_sum = 0;
+                        for(var j = 0; j < data_matrix.length; j++){
+                            temp_sum = parseFloat(temp_sum) + parseFloat(data_matrix[j][i]);
+                        }
+                        avg_col = avg_col.concat([temp_sum]/ylab.length);
+                    }     
+                         
+                    
+                                   
+
+                    
+                        var width = data_matrix[1].length*h_spacing;
+                        var height = data_matrix.length*v_spacing;                    
+                        
+                    var svg = d3.select("#table").append("svg");
+                        svg.attr("width", width + margin.left + margin.right)
+                        .attr("height", height + margin.top + margin.bottom)
+                        .append("g")
+                        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+                        .selectAll("g")
+                        .data(data_matrix)
+                        .enter()
+                        .append("g")
+                        .attr("class", "row")
+                        .attr("transform", function(d, i){ return "translate(0," + (i*v_spacing) + ")"; })
+                        
+                        .selectAll("circle")
+                        .data(function(d){return d;})
+                        .enter().append("circle")
+                        .attr("fill", function(d) {
+                            return colorPicker(d);
+                        })
+                        .attr("r", function(d) {
+                            return d*circle_factor;
+                        })
+                        .attr("cx", function(d,i) {
+                            return (i * h_spacing) + 6;
+                        })
+                        .attr("cy", 6)
+                        .on("mouseover", function(){
+                            d3.select(this).attr("fill", "#F77E1C");
+                            var temp = d3.select(this).attr("alt");
+                            temp = Math.round(temp*100)/100
+                            tooltip.show("<strong>" + temp + "</strong>");
+                        })
+                        .on("mouseout", function(){d3.select(this).attr("fill", function(d) {
+                            tooltip.hide();
+                            return colorPicker(d);
+                        })})
+                        .attr("alt", function(d) {
+                            return d;
+                        })
+                        // axis
+                        var xScale = d3.scale.ordinal()
+                                              .domain(xlab)
+                                              .rangePoints([0+5, width-14]);
+                        var xAxis = d3.svg.axis()
+                                            .scale(xScale)
+                                            .orient("right")
+                                            
+                        var yScale = d3.scale.ordinal()
+                                             .domain(ylab)
+                                             .rangePoints([0+4, height-4]);
+                        var yAxis = d3.svg.axis()
+                                           .scale(yScale)
+                                           .tickSize(0)
+                                           .orient("left")                    
+                        svg.append("g")
+                            .attr("class", "axis")
+                            .attr("transform", "translate("+ margin.left + "," + (margin.top) + ") rotate(270)")
+                            .call(xAxis);
+                            
+                        svg.append("g")
+                            .attr("class", "axis")
+                            .attr("id","leftwords")
+                            .attr("transform", "translate("+ (margin.left -2) + "," + margin.top + ") rotate(0)")
+                            .call(yAxis);
+                        
+                        var col_hist_size = 0.5* margin.top;
+
+                        var col_hist_scale = d3.scale.linear()
+                                             .domain([0, d3.max(avg_col)])
+                                             .range([0, col_hist_size]);
+                            
+                            
+                            // top marginal bars
+                           //  svg.append("g")
+                           // //.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+                           // .attr("transform", "translate(" + margin.left + ",0)")
+                           // .selectAll("rect")
+                           // .data(sum_col)
+                           // .enter()
+                           // .append("rect")
+                           // .attr("x", function(d, i) {
+                           //     return i * 12;  //Bar width of 12 plus 1 for padding
+                           // })
+                           // .attr("y", function(d) {
+                           //        return margin.top - col_hist_scale(d) - 5; // spacing of 5
+                           //  })
+                           // .attr("width", 10)
+                           // .attr("fill","teal")
+                           // .attr("height", function(d) {
+                           //     return col_hist_scale(d);
+                           // });
+
+
+                           // upper marginal text
+                           // svg.append("g")
+                           //    .attr("transform", "translate(" + margin.left + ",0)")
+                           //    .selectAll("text")
+                           //    .data(sum_col)
+                           //    .enter()
+                           //    .append("text")
+                           //    .text(function(d) {
+                           //            return d;
+                           //       })
+                           //   .attr("x", function(d, i) {
+                           //        return i * 12 + 2 + 3;
+                           //   })
+                           //   .attr("y", function(d) {
+                           //        return margin.top - col_hist_scale(d) - 5 - 3;
+                           //   })
+                           //   .attr("font-family", "sans-serif")
+                           //   .attr("font-size", "8px")
+                           //   .attr("fill", "black")
+                           //   .attr("text-anchor", "middle");
+                             
+                             // upper marginal axis line
+                            
+                            
+                            // row histogram
+                            var row_hist_size = 0.8* margin.right;
+
+                            var row_hist_scale = d3.scale.linear()
+                                                 .domain([0, d3.max(avg_rows)])
+                                                 .range([0, row_hist_size]);
+                            // right hand side marginal bars
+                            svg.append("g")
+                            .attr("transform", "translate(" + (width + margin.right) + "," + margin.top + ")")
+                            .selectAll("rect")
+                            .data(sum_rows)
+                            .enter()
+                            .append("rect")
+                            .attr("x", function(d, i) {
+                                return 0; // spacing of 5
+                            })
+                            .attr("y", function(d, i) {
+                                return i * 12;  //Bar width of 12 plus 1 for padding
+                                  
+                            })
+                            .attr("width",  function(d,i) {
+                                   return row_hist_scale(avg_rows[i]);
+                            })
+                            .attr("fill","rgb(54, 144, 192)")
+                            .attr("height", 10)
+                            .attr("class", "rowright");
+                            
+                            
+                            // right marginal text labels
+                        svg.append("g")
+                           .attr("transform", "translate(" + (width + margin.right) + "," + margin.top + ")")
+                           .selectAll("text")
+                           .data(avg_rows)
+                           .enter()
+                           .append("text")
+                           .text(function(d) {
+                                   return Math.round(d*100)/100;
+                              })
+                          .attr("x", function(d, i) {
+                              return row_hist_scale(d) + 5;
+
+                          })
+                          .attr("y", function(d, i) {
+                               return i * 12 + 8;
+                          })
+                          .attr("font-family", "sans-serif")
+                          .attr("font-size", "8px")
+                          .attr("class", "righttext")
+                          .attr("fill", "black");
+                        
+                        // legend text
+                        var legend = [4, 8, 16, 32];
+                        // legend color boxes
+                        svg.append("g")
+                           .attr("transform", "translate(20,60)")
+                           .selectAll("circle")
+                           .data(legend)
+                           .enter()
+                           .append("circle")
+                           .attr("cx", function(d, i) {
+                               return i * (h_spacing + 12);  //h_spacing plus padding
+                           })
+                           .attr("cy", function(d) {
+                               return 20;
+                           })
+                          .attr("r", function(d){
+                              return d*circle_factor;
+                          })
+                          .attr("fill",function(d){
+                              return colorPicker(d);
+                          })
+                          .attr("height", 10);
+                          
+                          // legend text
+                          svg.append("g")
+                             .attr("transform", "translate(20,60)")
+                             .selectAll("text")
+                                .data(legend)
+                                .enter()
+                                .append("text")
+                                .text(function(d) {
+                                        return d;
+                                   })
+                               .attr("x", function(d, i) {
+                                   return i * (h_spacing+12);
+
+                               })
+                               .attr("y", function(d, i) {
+                                    return 50;
+                               })
+                               .attr("font-family", "sans-serif")
+                               .attr("font-size", "8px")
+                               .attr("fill", "black")
+                               .attr("text-anchor", "middle");      
+                             
+                           svg.append("text").attr("transform", "translate(20,65)")
+                           .text("Legend:")
+                           .attr("font-family", "sans-serif")
+                           .attr("font-size", "12px");                                       
+                                     
+                    });
+                function animate(value) {
+                    var rows = orders_rows[value];
+                    var bars = orders_bars[value];
+                     d3.selectAll(".row").transition()
+                        .duration(2500)
+                        .attr("transform", function(d,i){
+                            return " translate(0," + rows[i]*12 + " )";
+                        });
+                    d3.selectAll(".rowright").transition()
+                       .duration(2500)
+                       .attr("transform", function(d,i){
+                           return " translate(0," + bars[i] + " )";
+                       });
+                   d3.selectAll(".righttext").transition()
+                      .duration(2500)
+                      .attr("transform", function(d,i){
+                          return " translate(0," + bars[i] + " )";
+                      });
+                      d3.selectAll("#leftwords > g").transition()
+                         .duration(2500)
+                         .attr("transform", function(d,i){
+                             return " translate(0," + ((rows[i]*12) + 5)  + " )";
+                         });         
+                           
+                };
+                
+                d3.select("#order").on("change", function() {
+                  animate(this.value);
+                });
+        </script>       
+        </div>
+
+    </body>
+</html>

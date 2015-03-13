@@ -1,4 +1,4 @@
 d3-bubbleplot
 =============
 
-D3 bubbleplot experiment
+D3 bubbleplot experiment.

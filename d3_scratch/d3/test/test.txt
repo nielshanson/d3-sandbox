@@ -1,0 +1,2086 @@
+BLASTP 2.2.25+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Reference for composition-based statistics: Alejandro A. Schaffer,
+L. Aravind, Thomas L. Madden, Sergei Shavirin, John L. Spouge, Yuri
+I. Wolf, Eugene V. Koonin, and Stephen F. Altschul (2001),
+"Improving the accuracy of PSI-BLAST protein database searches with
+composition-based statistics and other refinements", Nucleic Acids
+Res. 29:2994-3005.
+
+
+
+Database: /common/data/metacyc-v4-2011-07-03
+           22,618 sequences; 8,826,467 total letters
+
+
+
+Query= HHOT_0001
+
+Length=170
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|A6WE21|PDXH_KINRD  Pyridoxine/pyridoxamine 5'-phosphate oxidas...  33.5    0.044
+sp|A4YI28|SYL2_METS5  Leucyl-tRNA synthetase 2 OS=Metallosphaera ...  28.5    1.6  
+sp|Q96266|GSTF6_ARATH  Glutathione S-transferase 6, chloroplastic...  27.7    2.8  
+sp|P22988|LDHA_HORVU  L-lactate dehydrogenase A OS=Hordeum vulgar...  27.3    3.2  
+tr|Q59455|Q59455_HALSA  Pyruvate synthase (Ferredoxin oxidoreduct...  26.6    5.9  
+
+
+>sp|A6WE21|PDXH_KINRD Pyridoxine/pyridoxamine 5'-phosphate oxidase OS=Kineococcus radiotolerans 
+(strain ATCC BAA-149 / DSM 14245 / SRS30216) GN=pdxH 
+PE=3 SV=1 # UNIPROT # A6WE21 # PNPOXI-RXN # KRAD266940:KRAD_3597-MONOMER 
+#  1.4.3.5 1.4.3.5
+Length=223
+
+ Score = 33.5 bits (75),  Expect = 0.044, Method: Compositional matrix adjust.
+ Identities = 21/68 (31%), Positives = 33/68 (49%), Gaps = 13/68 (19%)
+
+Query  22   SRGYGALIIKWMLESLRNSPSFISTYRENNPDVADHHPDAGRPD----------FLVLAI  71
+            SR YG+ I  W+ E  R +PS  + + E    + +  PD G PD          +LV A+
+Sbjct  125  SRPYGSRIGAWVSEQSRTTPSAAALH-EREAQLRERWPDTGSPDDVPTPPHWGGYLVRAL  183
+
+Query  72   ENSIQYWN  79
+            E  +++W 
+Sbjct  184  E--VEFWQ  189
+
+
+>sp|A4YI28|SYL2_METS5 Leucyl-tRNA synthetase 2 OS=Metallosphaera sedula (strain ATCC 
+51363 / DSM 5348) GN=leuS2 PE=3 SV=1 # UNIPROT # A4YI28 # 
+LEUCINE--TRNA-LIGASE-RXN # MSED399549:MSED_1940-MONOMER #  6.1.1.4
+Length=950
+
+ Score = 28.5 bits (62),  Expect = 1.6, Method: Compositional matrix adjust.
+ Identities = 13/40 (33%), Positives = 25/40 (63%), Gaps = 3/40 (7%)
+
+Query  11   LDYIHTKEESRSRGYGALI---IKWMLESLRNSPSFISTY  47
+            LD++  +  +R+RG G  +    KW++ESL +S  +++ Y
+Sbjct  488  LDWLQKRACARTRGLGTPLPWDKKWIIESLSDSTIYMAYY  527
+
+
+>sp|Q96266|GSTF6_ARATH Glutathione S-transferase 6, chloroplastic OS=Arabidopsis thaliana 
+GN=GST6 PE=1 SV=3 # UNIPROT # Q96266 # GSHTRAN-RXN # # 
+ 2.5.1.18
+Length=263
+
+ Score = 27.7 bits (60),  Expect = 2.8, Method: Compositional matrix adjust.
+ Identities = 16/46 (35%), Positives = 20/46 (44%), Gaps = 4/46 (8%)
+
+Query  100  NDCIVMKCGDNVCGSKVGEKLDP----AAMDPNFDGDFNEREDPAA  141
+             DC  +K   NV     G++ DP     A +  F G F    DPAA
+Sbjct  137  QDCKKVKATTNVWLQVEGQQFDPNASKLAFERVFKGMFGMTTDPAA  182
+
+
+>sp|P22988|LDHA_HORVU L-lactate dehydrogenase A OS=Hordeum vulgare PE=1 SV=1 # UNIPROT 
+# P22988 # L-LACTATE-DEHYDROGENASE-RXN # #  1.1.1.27
+Length=356
+
+ Score = 27.3 bits (59),  Expect = 3.2, Method: Compositional matrix adjust.
+ Identities = 22/87 (26%), Positives = 38/87 (44%), Gaps = 20/87 (22%)
+
+Query  44   ISTYRENNPDVADHHPDAGRPDFLVLAIENSIQYWNLKFDLVLEQDSHIRKRYNAFNDCI  103
+            ++ YR+  P VA+H PDA     L+L + N +              +++  + + F    
+Sbjct  136  VALYRKIVPPVAEHSPDA-----LLLVVSNPVDVL-----------TYVAWKLSGFPASR  179
+
+Query  104  VMKCGDNVCGSK----VGEKLDPAAMD  126
+            V+  G N+  S+    + E LD  A D
+Sbjct  180  VIGSGTNLDSSRFRFLIAEHLDVNAQD  206
+
+
+>tr|Q59455|Q59455_HALSA Pyruvate synthase (Ferredoxin oxidoreductase) (Fragment) OS=Halobacterium 
+salinarium PE=4 SV=2 # UNIPROT # Q59455 # PYRUFLAVREDUCT-RXN 
+# #  1.2.7.1
+Length=628
+
+ Score = 26.6 bits (57),  Expect = 5.9, Method: Composition-based stats.
+ Identities = 10/24 (42%), Positives = 14/24 (59%), Gaps = 0/24 (0%)
+
+Query  144  SPILSRRTSRAGPPKAKPTKPKNA  167
+            +P++     RAGP    PTKP+ A
+Sbjct  314  TPLVLLEAQRAGPSTGMPTKPEQA  337
+
+
+
+Lambda     K      H
+   0.317    0.135    0.413 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 543267760
+
+
+Query= HHOT_0002
+
+Length=193
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|Q5LEY1|BIOB_BACFN  Biotin synthase OS=Bacteroides fragilis (st...   190    2e-49
+sp|P44426|BIOA_HAEIN  Adenosylmethionine-8-amino-7-oxononanoate a...   169    8e-43
+sp|P0A4X6|BIOA_MYCTU  Adenosylmethionine-8-amino-7-oxononanoate a...   160    4e-40
+sp|P46395|BIOA_CORGL  Adenosylmethionine-8-amino-7-oxononanoate a...   155    1e-38
+sp|P50277|BIOA_YEAST  Adenosylmethionine-8-amino-7-oxononanoate a...   151    1e-37
+
+
+>sp|Q5LEY1|BIOB_BACFN Biotin synthase OS=Bacteroides fragilis (strain ATCC 25285 / 
+NCTC 9343) GN=bioB PE=3 SV=1 # UNIPROT # Q5LEY1 # 2.8.1.6-RXN 
+# BFRA272559:BF1617-MONOMER #  2.8.1.6
+Length=748
+
+ Score =  190 bits (483),  Expect = 2e-49, Method: Compositional matrix adjust.
+ Identities = 96/187 (52%), Positives = 124/187 (67%), Gaps = 1/187 (0%)
+
+Query  1    RFDVLLILDEIATGFGRTGSMFACEQAGVVPDIMTLSKALTGGTMPLAATVATDQVYDAF  60
+            R+ VLLI DEIATGFGRTG +FA E AGV PDIM + KALTGG M L+A + T++V D  
+Sbjct  554  RYGVLLIFDEIATGFGRTGKLFAWEHAGVEPDIMCIGKALTGGYMTLSAVLTTNEVADCI  613
+
+Query  61   LSDDPSKAFMHGPTYTGNALACAAANASMDLFEQEDRLGQVTLIEGQLTSELADCSDLSC  120
+             +  P  AFMHGPT+ GN LACA A AS+ L         V  IE QL  ELA   +L  
+Sbjct  614  SNHAPG-AFMHGPTFMGNPLACAVACASVRLLLTSGWQENVKRIEAQLNRELAPARELPQ  672
+
+Query  121  VTDVRVKGAIGVVQLDRMPDLNAMRRRFVAEGVWVRPFGDFVYLMPPLVIGAQDLTLLTK  180
+            V DVRV GAIGV+++    ++  ++RRFV EG+W+RPFG  +Y+MPP +I  + LT LT+
+Sbjct  673  VADVRVLGAIGVIEMKEPVNMAYLQRRFVEEGIWLRPFGKLIYVMPPFIITPEQLTKLTE  732
+
+Query  181  AVRTVLS  187
+             +  ++S
+Sbjct  733  GMIRIIS  739
+
+
+>sp|P44426|BIOA_HAEIN Adenosylmethionine-8-amino-7-oxononanoate aminotransferase OS=Haemophilus 
+influenzae (strain ATCC 51907 / DSM 11121 / KW20 
+/ Rd) GN=bioA PE=3 SV=1 # UNIPROT # P44426 # DAPASYN-RXN # 
+HINF71421:HI_1554-MONOMER #  2.6.1.62
+Length=430
+
+ Score =  169 bits (427),  Expect = 8e-43, Method: Compositional matrix adjust.
+ Identities = 83/188 (45%), Positives = 118/188 (63%), Gaps = 1/188 (0%)
+
+Query  1    RFDVLLILDEIATGFGRTGSMFACEQAGVVPDIMTLSKALTGGTMPLAATVATDQVYDAF  60
+            ++ +LLI DEIATGFGRTG +FA E AG+ PDIM + KALTGG + L+A++ T ++    
+Sbjct  240  QYGILLIFDEIATGFGRTGKLFAAEHAGISPDIMCIGKALTGGYLTLSASITTTEIAQTI  299
+
+Query  61   LSDDPSKAFMHGPTYTGNALACAAANASMDLFEQEDRLGQVTLIEGQLTSELADCSDLSC  120
+             S + +K FMHGPT+  N LACA A  S+ L  +      +  IE  L  +L+  S+   
+Sbjct  300  CSGE-AKCFMHGPTFMANPLACAIAAESIRLLLESPWQQNIQRIESSLKQQLSPLSEKDY  358
+
+Query  121  VTDVRVKGAIGVVQLDRMPDLNAMRRRFVAEGVWVRPFGDFVYLMPPLVIGAQDLTLLTK  180
+            V +VR  GAIGVV++    ++  +  RFV +GVW+RPFG  VY+MPP VI   +L  LT+
+Sbjct  359  VKEVRALGAIGVVEMKSAVNMKTLVPRFVEQGVWIRPFGKLVYVMPPFVIKDDELQKLTE  418
+
+Query  181  AVRTVLSE  188
+             +   L++
+Sbjct  419  GMILALTQ  426
+
+
+>sp|P0A4X6|BIOA_MYCTU Adenosylmethionine-8-amino-7-oxononanoate aminotransferase OS=Mycobacterium 
+tuberculosis GN=bioA PE=1 SV=1 # UNIPROT # P0A4X6 
+# DAPASYN-RXN # #  2.6.1.62
+Length=437
+
+ Score =  160 bits (404),  Expect = 4e-40, Method: Compositional matrix adjust.
+ Identities = 88/185 (48%), Positives = 117/185 (64%), Gaps = 1/185 (0%)
+
+Query  1    RFDVLLILDEIATGFGRTGSMFACEQAGVVPDIMTLSKALTGGTMPLAATVATDQVYDAF  60
+            R++VLLI DEIATGFGRTG++FA + AGV PDIM + KALTGG + LAAT+ T  V    
+Sbjct  246  RYEVLLIFDEIATGFGRTGALFAADHAGVSPDIMCVGKALTGGYLSLAATLCTADVAHT-  304
+
+Query  61   LSDDPSKAFMHGPTYTGNALACAAANASMDLFEQEDRLGQVTLIEGQLTSELADCSDLSC  120
+            +S   + A MHGPT+  N LACA + AS++L   +D   ++T +   LT+ L     L  
+Sbjct  305  ISAGAAGALMHGPTFMANPLACAVSVASVELLLGQDWRTRITELAAGLTAGLDTARALPA  364
+
+Query  121  VTDVRVKGAIGVVQLDRMPDLNAMRRRFVAEGVWVRPFGDFVYLMPPLVIGAQDLTLLTK  180
+            VTDVRV GAIGV++ DR  DL       +  GVW+RPF + VY MPP +    ++T +T 
+Sbjct  365  VTDVRVCGAIGVIECDRPVDLAVATPAALDRGVWLRPFRNLVYAMPPYICTPAEITQITS  424
+
+Query  181  AVRTV  185
+            A+  V
+Sbjct  425  AMVEV  429
+
+
+>sp|P46395|BIOA_CORGL Adenosylmethionine-8-amino-7-oxononanoate aminotransferase OS=Corynebacterium 
+glutamicum GN=bioA PE=3 SV=2 # UNIPROT # P46395 
+# DAPASYN-RXN # CGLU196627:CG2885-MONOMER #  2.6.1.62
+Length=423
+
+ Score =  155 bits (391),  Expect = 1e-38, Method: Compositional matrix adjust.
+ Identities = 82/187 (44%), Positives = 114/187 (61%), Gaps = 4/187 (2%)
+
+Query  1    RFDVLLILDEIATGFGRTGSMFACEQAGVVPDIMTLSKALTGGTMPLAATVATDQVYDAF  60
+            + D  LI+DEIATGFGRTG +FA    G+ PDIM + KALTGG M  AAT+ TD+V    
+Sbjct  235  KHDRFLIVDEIATGFGRTGELFATLSNGLQPDIMCVGKALTGGFMSFAATLCTDKVAQLI  294
+
+Query  61   LSDDPSKAFMHGPTYTGNALACAAANASMDLFEQEDRLGQVTLIEGQLTSELADCSDLSC  120
+             + +   A MHGPT+  N LACA ++AS+++ E      QV  IE +L + L+    L  
+Sbjct  295  STPNGGGALMHGPTFMANPLACAVSHASLEIIETGMWQKQVKRIEAELIAGLSPLQHLPG  354
+
+Query  121  VTDVRVKGAIGVVQLDRMPDLNAMRRRFVAEGVWVRPFGDFVYLMPPLVIG----AQDLT  176
+            V DVRV GAIGV+++++  ++    +  +  GVW+RPFG  +Y+MPP +      AQ  T
+Sbjct  355  VADVRVLGAIGVIEMEQNVNVEEATQAALDHGVWIRPFGRLLYVMPPYITTSEQCAQICT  414
+
+Query  177  LLTKAVR  183
+             L  AV+
+Sbjct  415  ALHAAVK  421
+
+
+>sp|P50277|BIOA_YEAST Adenosylmethionine-8-amino-7-oxononanoate aminotransferase OS=Saccharomyces 
+cerevisiae (strain ATCC 204508 / S288c) GN=BIO3 
+PE=1 SV=1 # UNIPROT # P50277 # DAPASYN-RXN # #  2.6.1.62
+Length=480
+
+ Score =  151 bits (382),  Expect = 1e-37, Method: Compositional matrix adjust.
+ Identities = 85/216 (40%), Positives = 123/216 (57%), Gaps = 24/216 (11%)
+
+Query  1    RFDVLLILDEIATGFGRTGSMFA---CE------------QAGVVPDIMTLSKALTGGTM  45
+            ++DVL I+DEIATGFGRTG +FA   C+            Q  VVPDI+ + K LT G M
+Sbjct  262  QYDVLFIMDEIATGFGRTGEIFAFKHCQKYQDQHGISPSDQIKVVPDILCVGKGLTSGYM  321
+
+Query  46   PLAATVATDQVYDAFLS-DDPSKA-FMHGPTYTGNALACAAANASMDLFEQEDRLGQVTL  103
+             ++A V  D+V     S + P+   FMHGPT+ GNALAC+ A  SMD+  + +   QV+ 
+Sbjct  322  TMSAVVVNDKVASRISSPNSPTGGCFMHGPTFMGNALACSVAEKSMDILLRGEWRKQVSA  381
+
+Query  104  IEGQLTSELADCSDL-------SCVTDVRVKGAIGVVQLDRMPDLNAMRRRFVAEGVWVR  156
+            IE Q+  EL             + V  V V GA+G+V+L +  D    +++F+++GV +R
+Sbjct  382  IENQIYRELYQYIKNPDNGLIGTVVKRVSVIGAVGIVELYKKTDPEWFQKKFISKGVHIR  441
+
+Query  157  PFGDFVYLMPPLVIGAQDLTLLTKAVRTVLSEWGAE  192
+            PF    Y+MPP VI  ++LT + + +  VL EW + 
+Sbjct  442  PFNCLCYIMPPYVITTEELTKVNQVLIEVLHEWKSH  477
+
+
+
+Lambda     K      H
+   0.322    0.137    0.404 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 681306711
+
+
+Query= HHOT_0003
+
+Length=77
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+tr|Q59456|Q59456_HALSA  Pyruvate synthase (Ferredoxin oxidoreduct...  54.7    8e-09
+tr|O25312|O25312_HELPY  Ferredoxin oxidoreductase, beta subunit O...  47.0    2e-06
+sp|O27113|KORB_METTH  2-oxoglutarate synthase subunit korB OS=Met...  46.2    3e-06
+sp|Q57957|KORB_METJA  2-oxoglutarate synthase subunit korB OS=Met...  43.9    1e-05
+sp|O29782|KORB_ARCFU  2-oxoglutarate synthase subunit korB OS=Arc...  38.9    4e-04
+
+
+>tr|Q59456|Q59456_HALSA Pyruvate synthase (Ferredoxin oxidoreductase) (Fragment) OS=Halobacterium 
+salinarium PE=4 SV=2 # UNIPROT # Q59456 # PYRUFLAVREDUCT-RXN 
+# HSP64091:VNG1125G-MONOMER #  1.2.7.1
+Length=312
+
+ Score = 54.7 bits (130),  Expect = 8e-09, Method: Composition-based stats.
+ Identities = 20/47 (43%), Positives = 30/47 (64%), Gaps = 0/47 (0%)
+
+Query  31  WCPGCGDYAILAGVQKLMPELGIPRENMVFISGIGCSSRFPYYMNTY  77
+           WCPGCGD+ +L  ++  M ELG   E ++  +GIGCS +   Y ++Y
+Sbjct  29  WCPGCGDFGVLKALKGAMAELGKDPEEILLATGIGCSGKLNSYFDSY  75
+
+
+>tr|O25312|O25312_HELPY Ferredoxin oxidoreductase, beta subunit OS=Helicobacter pylori 
+GN=HP_0590 PE=4 SV=1 # UNIPROT # O25312 # PYRUFLAVREDUCT-RXN 
+# MetaCyc:HP0590-MONOMER #  1.2.7.1
+Length=273
+
+ Score = 47.0 bits (110),  Expect = 2e-06, Method: Composition-based stats.
+ Identities = 19/45 (43%), Positives = 27/45 (60%), Gaps = 0/45 (0%)
+
+Query  31  WCPGCGDYAILAGVQKLMPELGIPRENMVFISGIGCSSRFPYYMN  75
+           WC GCGD  IL  + + +  LG   +++  +SGIGCS R   Y+N
+Sbjct  18  WCWGCGDGVILKSIIRTIDALGWKMDDVCLVSGIGCSGRMSSYVN  62
+
+
+>sp|O27113|KORB_METTH 2-oxoglutarate synthase subunit korB OS=Methanobacterium thermoautotrophicum 
+(strain Delta H) GN=korB PE=4 SV=1 # UNIPROT 
+# O27113 # 2-OXOGLUTARATE-SYNTHASE-RXN # MTHE187420:MTH1034-MONOMER 
+#  1.2.7.3
+Length=286
+
+ Score = 46.2 bits (108),  Expect = 3e-06, Method: Compositional matrix adjust.
+ Identities = 21/45 (47%), Positives = 28/45 (63%), Gaps = 0/45 (0%)
+
+Query  31  WCPGCGDYAILAGVQKLMPELGIPRENMVFISGIGCSSRFPYYMN  75
+           +C GCG+  +L    K M   GI  +N+  +SGIGCSSR P Y+N
+Sbjct  21  FCAGCGNGIVLNSFFKGMEMAGIDFDNIAMVSGIGCSSRIPGYVN  65
+
+
+>sp|Q57957|KORB_METJA 2-oxoglutarate synthase subunit korB OS=Methanocaldococcus jannaschii 
+(strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / 
+NBRC 100440) GN=korB PE=4 SV=1 # UNIPROT # Q57957 # PYRUFLAVREDUCT-RXN 
+# MJAN243232:MJ_0537-MONOMER #  1.2.7.1
+Length=270
+
+ Score = 43.9 bits (102),  Expect = 1e-05, Method: Composition-based stats.
+ Identities = 19/44 (44%), Positives = 28/44 (64%), Gaps = 0/44 (0%)
+
+Query  31  WCPGCGDYAILAGVQKLMPELGIPRENMVFISGIGCSSRFPYYM  74
+           +C GCG+  ++    K + EL I  E+ + +SGIGCSSR P Y+
+Sbjct  17  FCSGCGNGIVMNCFLKAIEELNIKPEDYIAVSGIGCSSRVPGYL  60
+
+
+>sp|O29782|KORB_ARCFU 2-oxoglutarate synthase subunit korB OS=Archaeoglobus fulgidus 
+(strain ATCC 49558 / VC-16 / DSM 4304 / JCM 9628 / NBRC 100126) 
+GN=korB PE=4 SV=1 # UNIPROT # O29782 # 2-OXOGLUTARATE-SYNTHASE-RXN 
+# AFUL224325:AF_0468-MONOMER #  1.2.7.3
+Length=267
+
+ Score = 38.9 bits (89),  Expect = 4e-04, Method: Composition-based stats.
+ Identities = 17/45 (38%), Positives = 25/45 (56%), Gaps = 1/45 (2%)
+
+Query  31  WCPGCGDYAILAGVQKLMPELGIPRENMVFISGIGCSSRFPYYMN  75
+           WC GC +  +LA   + +   G  R+  V +SGIGCS R   Y++
+Sbjct  18  WCAGCPNGIVLASFIRAVKR-GFERDKTVVVSGIGCSGRITQYLD  61
+
+
+
+Lambda     K      H
+   0.321    0.136    0.438 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 216109180
+
+
+Query= HHOT_0004
+
+Length=126
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|O29781|KORA_ARCFU  2-oxoglutarate synthase subunit korA OS=Arc...  44.7    1e-05
+tr|Q59455|Q59455_HALSA  Pyruvate synthase (Ferredoxin oxidoreduct...  36.2    0.004
+sp|O27112|KORA_METTH  2-oxoglutarate synthase subunit korA OS=Met...  33.5    0.022
+sp|P51056|ODO1_COXBU  2-oxoglutarate dehydrogenase E1 component O...  30.4    0.20 
+sp|Q06951|RFBB_VIBCH  Phosphomannomutase OS=Vibrio cholerae GN=rf...  30.0    0.24 
+
+
+>sp|O29781|KORA_ARCFU 2-oxoglutarate synthase subunit korA OS=Archaeoglobus fulgidus 
+(strain ATCC 49558 / VC-16 / DSM 4304 / JCM 9628 / NBRC 100126) 
+GN=korA PE=3 SV=1 # UNIPROT # O29781 # 2-OXOGLUTARATE-SYNTHASE-RXN 
+# AFUL224325:AF_0469-MONOMER #  1.2.7.3
+Length=346
+
+ Score = 44.7 bits (104),  Expect = 1e-05, Method: Compositional matrix adjust.
+ Identities = 27/77 (36%), Positives = 42/77 (55%), Gaps = 2/77 (2%)
+
+Query  13   DLPPLKSIGPEKNQLLVLCWGSAYGAALSALESLQQKGKQVSLLHLQCLYPFHEELGNVL  72
+            D  P+     E+  L V  +GS+Y  A S+ + L +KG    +L L+ L+PF E+     
+Sbjct  236  DFRPMVRFEGEEGVLFV-AYGSSYRLAKSSAKLLAEKGVSAGILKLESLFPFPEDAVRRY  294
+
+Query  73   S-GFDQILIPEMNLGQL  88
+            S   D +++PEMN GQ+
+Sbjct  295  SKKADLVVVPEMNAGQV  311
+
+
+>tr|Q59455|Q59455_HALSA Pyruvate synthase (Ferredoxin oxidoreductase) (Fragment) OS=Halobacterium 
+salinarium PE=4 SV=2 # UNIPROT # Q59455 # PYRUFLAVREDUCT-RXN 
+# #  1.2.7.1
+Length=628
+
+ Score = 36.2 bits (82),  Expect = 0.004, Method: Composition-based stats.
+ Identities = 32/108 (30%), Positives = 47/108 (44%), Gaps = 9/108 (8%)
+
+Query  21   GPEKNQLLVLCWGSAYGAALSALESLQQKGKQVSLLHLQCLYPFH-EELGNVLSGFDQIL  79
+            G E   + ++ WGS  G    A+  L   G  V  L +  L PF   E    +   D+ +
+Sbjct  501  GDEDADIGLIAWGSQEGTVEEAVHRLNDDGNSVKALGISDLAPFPVAETRAFVDSVDEAI  560
+
+Query  80   IPEM-NLGQLSVLIRSEFLVDAV-----SMKKVQGKPFMVSEIRERIE  121
+            + EM +  Q   LI+ E  V  +     S+ K  G PF  +EI E +E
+Sbjct  561  VVEMSSTKQFRGLIQKE--VGDIGGKLSSLLKYNGNPFEPAEIVEAVE  606
+
+
+>sp|O27112|KORA_METTH 2-oxoglutarate synthase subunit korA OS=Methanobacterium thermoautotrophicum 
+(strain Delta H) GN=korA PE=3 SV=3 # UNIPROT 
+# O27112 # 2-OXOGLUTARATE-SYNTHASE-RXN # MTHE187420:MTH1033-MONOMER 
+#  1.2.7.3
+Length=376
+
+ Score = 33.5 bits (75),  Expect = 0.022, Method: Compositional matrix adjust.
+ Identities = 19/80 (24%), Positives = 40/80 (50%), Gaps = 1/80 (1%)
+
+Query  10   HRKDLPPLKSIGPEKNQLLVLCWGSAYGAALSALESLQQKGKQVSLLHLQCLYPFHE-EL  68
+            HR  +  ++    E   + V+ +G+   +  +A++  ++ G +   L +   +PF E E+
+Sbjct  258  HRDRISDVQEELTEDAYITVISYGAPSRSVATAVKMAREDGVRAGYLKINTPWPFPETEV  317
+
+Query  69   GNVLSGFDQILIPEMNLGQL  88
+                    ++L+ EMNLGQ+
+Sbjct  318  RAAAERSGKLLVVEMNLGQM  337
+
+
+>sp|P51056|ODO1_COXBU 2-oxoglutarate dehydrogenase E1 component OS=Coxiella burnetii 
+GN=sucA PE=3 SV=3 # UNIPROT # P51056 # 2OXOGLUTDECARB-RXN 
+# CBUR227377:CBU_1399-MONOMER #  1.2.4.2
+Length=934
+
+ Score = 30.4 bits (67),  Expect = 0.20, Method: Composition-based stats.
+ Identities = 15/56 (27%), Positives = 31/56 (56%), Gaps = 1/56 (1%)
+
+Query  14   LPPLKSIGPEKNQLLVLCWGSAYGAALSALESLQQKGKQVSLLHLQCLYPF-HEEL  68
+            +P ++   P+K   ++LC G  Y   L+     + K   ++++ ++ LYPF ++EL
+Sbjct  803  IPEIEKHDPKKITRVILCSGKVYYDLLAKRREHKGKLNHIAMIRIEQLYPFPYDEL  858
+
+
+>sp|Q06951|RFBB_VIBCH Phosphomannomutase OS=Vibrio cholerae GN=rfbB PE=3 SV=1 # UNIPROT 
+# Q06951 # PHOSMANMUT-RXN # #  5.4.2.8
+Length=463
+
+ Score = 30.0 bits (66),  Expect = 0.24, Method: Composition-based stats.
+ Identities = 20/63 (32%), Positives = 34/63 (54%), Gaps = 1/63 (1%)
+
+Query  20   IGPEKNQLLVLCWGSAYGAALSALESLQQKGKQVSLLHLQCLYPFHEELGNVLSGFDQIL  79
+            I P K + + L   S  GAA   ++ L+++  ++S+  L+ +   HEE GN  +G    L
+Sbjct  166  ITPAKIKPMKLVINSGNGAAGHVIDELEKRFIELSI-PLEIIKVHHEEDGNFPNGIPNPL  224
+
+Query  80   IPE  82
+            +PE
+Sbjct  225  LPE  227
+
+
+
+Lambda     K      H
+   0.319    0.138    0.405 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 283061417
+
+
+Query= HHOT_0005
+
+Length=180
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+tr|Q65YW9|Q65YW9_PSEPU  FMNH2-dependent dimethyl sulfone monooxyg...  88.2    2e-18
+sp|P75898|RUTA_ECOLI  Pyrimidine monooxygenase RutA OS=Escherichi...  53.1    6e-08
+sp|Q8UAE8|SSUD_AGRT5  Alkanesulfonate monooxygenase OS=Agrobacter...  49.7    7e-07
+sp|A1TRM3|SSUD_ACIAC  Alkanesulfonate monooxygenase OS=Acidovorax...  46.6    5e-06
+sp|O29196|MER_ARCFU  5,10-methylenetetrahydromethanopterin reduct...  41.6    2e-04
+
+
+>tr|Q65YW9|Q65YW9_PSEPU FMNH2-dependent dimethyl sulfone monooxygenase OS=Pseudomonas 
+putida GN=sfnG PE=4 SV=1 # UNIPROT # Q65YW9 # RXN-9769 # MetaCyc:MONOMER-14251 
+#  NIL
+Length=363
+
+ Score = 88.2 bits (217),  Expect = 2e-18, Method: Compositional matrix adjust.
+ Identities = 45/114 (40%), Positives = 69/114 (61%), Gaps = 4/114 (3%)
+
+Query  1    MRLKTIATIDVLSNGRVTIGCGAGWMEEEFLAIETEPF---KERGKVTDEYIAIFKELWT  57
+            +  K +ATID  + GR+ +   +GW + EF AI  EP+    ER + ++E+I   K +WT
+Sbjct  96   LAAKQLATIDQFTGGRIAVNVVSGWFKGEFRAI-GEPWLEHDERYRRSEEFIRALKGIWT  154
+
+Query  58   SENPTFEGKYNSFSDVKFEPKPVQRPHPPLWIGGESPAAKRRAVRLGDGWFPIG  111
+             +N +F G +  F+D   +PKP+QRPHP ++ GG S AA+  A R+ D +F  G
+Sbjct  155  QDNFSFHGDFYRFNDYTLKPKPLQRPHPEIFQGGSSRAARDMASRVSDWYFTNG  208
+
+
+>sp|P75898|RUTA_ECOLI Pyrimidine monooxygenase RutA OS=Escherichia coli (strain K12) 
+GN=rutA PE=1 SV=3 # UNIPROT # P75898 # RXN0-6444 # MetaCyc:G6523-MONOMER 
+#  NIL
+Length=382
+
+ Score = 53.1 bits (126),  Expect = 6e-08, Method: Compositional matrix adjust.
+ Identities = 40/168 (24%), Positives = 70/168 (42%), Gaps = 24/168 (14%)
+
+Query  4    KTIATIDVLSNGRVTIGCGAGWMEEEFLAIETEP----FKERGKVTDEYIAIFKELWTSE  59
+            +  ATID +S GR  +    GW + E+  +   P    F  R     EY+ + ++LW + 
+Sbjct  118  RMAATIDSISGGRFGVNLVTGWQKPEYEQMGIWPGDDYFSRRYDYLTEYVQVLRDLWGTG  177
+
+Query  60   NPTFEGKYNSFSDVKFEPKPVQRPHPPLWI--GGESPAAKRRAVRLGDGWFPIGANPNFP  117
+               F+G + + +D +  P+    P  P+ +   G+S A    + R  D  F  G      
+Sbjct  178  KSDFKGDFFTMNDCRVSPQ----PSVPMKVICAGQSDAGMAFSARYADFNFCFGKG----  229
+
+Query  118  LNTAAKYIDGLSSLKQLSAEYNRD----------PEELDLGFWSNWDH  155
+            +NT   +    + +KQ + +  RD           +E D    + W+H
+Sbjct  230  VNTPTAFAPTAARMKQAAEQTGRDVGSYVLFMVIADETDDAARAKWEH  277
+
+
+>sp|Q8UAE8|SSUD_AGRT5 Alkanesulfonate monooxygenase OS=Agrobacterium tumefaciens (strain 
+C58 / ATCC 33970) GN=ssuD PE=3 SV=2 # UNIPROT # Q8UAE8 
+# RXN0-280 # ATUM176299-1:ATU3426-MONOMER #  1.14.14.5
+Length=389
+
+ Score = 49.7 bits (117),  Expect = 7e-07, Method: Compositional matrix adjust.
+ Identities = 31/112 (28%), Positives = 48/112 (43%), Gaps = 1/112 (0%)
+
+Query  4    KTIATIDVLSNGRVTIGCGAGWMEEEFLAIET-EPFKERGKVTDEYIAIFKELWTSENPT  62
+            +  +T+D +S+GR+ +    G   +E        P  ER    DE+  +F  L  +    
+Sbjct  95   RLASTLDRVSHGRLLLNIVVGGSAQELAGDGIFLPHDERYDHADEFFQVFNSLIETGKGD  154
+
+Query  63   FEGKYNSFSDVKFEPKPVQRPHPPLWIGGESPAAKRRAVRLGDGWFPIGANP  114
+             +GKY      +    PVQ P PPL+ GG S A    +  + D +   G  P
+Sbjct  155  LDGKYIKAQGARLGLPPVQEPRPPLYFGGSSDAGIEFSAGITDKYLTWGEPP  206
+
+
+>sp|A1TRM3|SSUD_ACIAC Alkanesulfonate monooxygenase OS=Acidovorax citrulli (strain 
+AAC00-1) GN=ssuD PE=3 SV=1 # UNIPROT # A1TRM3 # RXN0-280 # AAVE397945:AAVE_3044-MONOMER 
+#  1.14.14.5
+Length=391
+
+ Score = 46.6 bits (109),  Expect = 5e-06, Method: Compositional matrix adjust.
+ Identities = 37/119 (32%), Positives = 59/119 (50%), Gaps = 11/119 (9%)
+
+Query  4    KTIATIDVLSNGRVTIGCGAGW----MEEEFLAIETEPFKERGKVTDEYIAIFKELWT--  57
+            +  AT D LS GR+ I    G     +E + + ++     +R   ++E+I I++E+ +  
+Sbjct  88   RMAATFDRLSGGRLLINLVTGGDRTELEGDGVFLD---HAQRYAQSEEFIRIWREILSRS  144
+
+Query  58   SENPTF--EGKYNSFSDVKFEPKPVQRPHPPLWIGGESPAAKRRAVRLGDGWFPIGANP  114
+             E  TF  EG++ S    K    PVQ+P+PP++ GG S AA   A    D +   G  P
+Sbjct  145  HEGGTFDYEGEHLSVKGAKLLYPPVQKPYPPVYFGGSSEAAHDLAAEQVDTYLTWGEPP  203
+
+
+>sp|O29196|MER_ARCFU 5,10-methylenetetrahydromethanopterin reductase OS=Archaeoglobus 
+fulgidus (strain ATCC 49558 / VC-16 / DSM 4304 / JCM 9628 
+/ NBRC 100126) GN=mer PE=3 SV=1 # UNIPROT # O29196 # METHELENE-THMPT-OXI-RXN 
+# AFUL224325:AF_1066-MONOMER #  1.5.99.11
+Length=332
+
+ Score = 41.6 bits (96),  Expect = 2e-04, Method: Compositional matrix adjust.
+ Identities = 32/111 (29%), Positives = 53/111 (48%), Gaps = 7/111 (6%)
+
+Query  5    TIATIDVLSNGRVTIGCGAG-WMEEEFLAIETEPFKERGKVTDEYIAIFKELWTSENPTF  63
+             I TI+ +S GR  +G GAG  +  E + I  E   +R +   E + I ++L   +   +
+Sbjct  76   AIGTINEISGGRAVLGIGAGDKVTFERIGITWEKPLKRMR---EAVEIIRQLTEGKAVKY  132
+
+Query  64   EGKYNSFSDVKFEPKPVQRPHPPLWIGGESPAAKRRAVRLGDGWFPIGANP  114
+            +G+   F+  K   KP      P++IG + P   + A  LGDG     ++P
+Sbjct  133  DGEIFKFNGAKLGFKP---GSIPIYIGAQGPKMLQLAAELGDGVLINASHP  180
+
+
+
+Lambda     K      H
+   0.316    0.136    0.427 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 602372381
+
+
+Query= HHOT_0006
+
+Length=192
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|O02691|HCD2_BOVIN  3-hydroxyacyl-CoA dehydrogenase type-2 OS=B...   164    2e-41
+sp|O18404|HCD2_DROME  3-hydroxyacyl-CoA dehydrogenase type-2 OS=D...   160    2e-40
+sp|O67610|FABG_AQUAE  3-oxoacyl-[acyl-carrier-protein] reductase ...  95.5    1e-20
+sp|Q9X248|FABG_THEMA  3-oxoacyl-[acyl-carrier-protein] reductase ...  93.2    6e-20
+sp|Q56840|HCDR_XANP2  2-(R)-hydroxypropyl-CoM dehydrogenase OS=Xa...  85.5    1e-17
+
+
+>sp|O02691|HCD2_BOVIN 3-hydroxyacyl-CoA dehydrogenase type-2 OS=Bos taurus GN=HSD17B10 
+PE=1 SV=3 # UNIPROT # O02691 # OHACYL-COA-DEHYDROG-RXN # 
+CATTLE:281809-MONOMER #  1.1.1.178 1.1.1.35
+Length=261
+
+ Score =  164 bits (416),  Expect = 2e-41, Method: Compositional matrix adjust.
+ Identities = 96/182 (53%), Positives = 120/182 (66%), Gaps = 5/182 (2%)
+
+Query  2    ASARKLAELGARCVIVDLQDEKGEAVAKELGG--LYVKADVADEEQVQAAVDAAME-MGP  58
+            A+A +L   GA  V++DL +  GE  AK+LG    +  ADV  E+ VQAA+  A E  G 
+Sbjct  25   ATAERLVGQGATAVLLDLPNSDGETQAKKLGKSCAFAPADVTSEKDVQAALTLAREKFGR  84
+
+Query  59   LRALVNGAGIGSAGRTVD-RNGDPMPLAQFEFVVRVNLIGTFNCTRLGAAAMAKTDPVDE  117
+            +   VN AGI  A +T + +      L  F+ V+ VNLIGTFN  RL A  M + +P D+
+Sbjct  85   VDVAVNCAGIAVASKTYNLKKSQAHTLEDFQRVINVNLIGTFNVIRLVAGEMGQNEP-DQ  143
+
+Query  118  DGQRGAIVNMASVAAFDGQTGQNAYSASKGGVVGMTLPIARDLVPLGIRVNTVAPGLIDT  177
+             GQRG I+N ASVAAF+GQ GQ AYSASKGG+VGMTLPIARDL P+GIRV T+APGL  T
+Sbjct  144  GGQRGVIINTASVAAFEGQVGQAAYSASKGGIVGMTLPIARDLAPMGIRVMTIAPGLFGT  203
+
+Query  178  PI  179
+            P+
+Sbjct  204  PL  205
+
+
+>sp|O18404|HCD2_DROME 3-hydroxyacyl-CoA dehydrogenase type-2 OS=Drosophila melanogaster 
+GN=scu PE=1 SV=1 # UNIPROT # O18404 # 1.1.1.178-RXN # # 
+ 1.1.1.178
+Length=255
+
+ Score =  160 bits (406),  Expect = 2e-40, Method: Compositional matrix adjust.
+ Identities = 93/186 (50%), Positives = 119/186 (64%), Gaps = 5/186 (2%)
+
+Query  1    EASARKLAELGARCVIVDLQDEKGEAVAKELGG--LYVKADVADEEQVQAAVDAAME-MG  57
+             A+A +LA+ GA  ++ DL   KG  VAKELG   ++V  DV  E+ V AA+  A +  G
+Sbjct  18   RATAERLAKQGASVILADLPSSKGNEVAKELGDKVVFVPVDVTSEKDVSAALQTAKDKFG  77
+
+Query  58   PLRALVNGAGIGSAGRTVDRNGD-PMPLAQFEFVVRVNLIGTFNCTRLGAAAMAKTDPVD  116
+             L   VN AG  +A +T + N +    L  F+ V+ +N +GTFN  RL A  M   +P +
+Sbjct  78   RLDLTVNCAGTATAVKTFNFNKNVAHRLEDFQRVININTVGTFNVIRLSAGLMGANEP-N  136
+
+Query  117  EDGQRGAIVNMASVAAFDGQTGQNAYSASKGGVVGMTLPIARDLVPLGIRVNTVAPGLID  176
+            +DGQRG IVN ASVAAFDGQ GQ AYSASK  VVGMTLPIARDL   GIR+ T+APGL +
+Sbjct  137  QDGQRGVIVNTASVAAFDGQIGQAAYSASKAAVVGMTLPIARDLSTQGIRICTIAPGLFN  196
+
+Query  177  TPIYGS  182
+            TP+  +
+Sbjct  197  TPMLAA  202
+
+
+>sp|O67610|FABG_AQUAE 3-oxoacyl-[acyl-carrier-protein] reductase FabG OS=Aquifex aeolicus 
+GN=fabG PE=1 SV=1 # UNIPROT # O67610 # 3-OXOACYL-ACP-REDUCT-RXN 
+# AAEO224324:AQ_1716-MONOMER #  1.1.1.100
+Length=248
+
+ Score = 95.5 bits (236),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 68/198 (35%), Positives = 100/198 (51%), Gaps = 21/198 (10%)
+
+Query  2    ASARKLAELGARCVIVDLQDEKGEAVAKELGGLY------VKADVADEEQVQAAVDAAME  55
+            A A KLA  G+  +I     E+ +AVA+E+   Y      V+ ++  EE +  A +    
+Sbjct  22   AIAEKLASAGSTVIITGTSGERAKAVAEEIANKYGVKAHGVEMNLLSEESINKAFEEIYN  81
+
+Query  56   M-GPLRALVNGAGIGSAGRTVDRNGDPMPLAQFEFVVRVNLIGTFNCTRLGAAAMAKTDP  114
+            +   +  LVN AGI     T D+    M L  +E V++VNL GTF  T+     M K   
+Sbjct  82   LVDGIDILVNNAGI-----TRDKLFLRMSLLDWEEVLKVNLTGTFLVTQNSLRKMIKQ--  134
+
+Query  115  VDEDGQRGAIVNMASVAAFDGQTGQNAYSASKGGVVGMTLPIARDLVPLGIRVNTVAPGL  174
+                 + G IVN++SV  F G  GQ  YS +K G++G T  +A++L P  + VN VAPG 
+Sbjct  135  -----RWGRIVNISSVVGFTGNVGQVNYSTTKAGLIGFTKSLAKELAPRNVLVNAVAPGF  189
+
+Query  175  IDTPIYG--SGEASDQFK  190
+            I+T +    S E   ++K
+Sbjct  190  IETDMTAVLSEEIKQKYK  207
+
+
+>sp|Q9X248|FABG_THEMA 3-oxoacyl-[acyl-carrier-protein] reductase FabG OS=Thermotoga 
+maritima GN=fabG PE=3 SV=1 # UNIPROT # Q9X248 # 3-OXOACYL-ACP-REDUCT-RXN 
+# TMAR243274:TM_1724-MONOMER #  1.1.1.100
+Length=246
+
+ Score = 93.2 bits (230),  Expect = 6e-20, Method: Compositional matrix adjust.
+ Identities = 66/185 (36%), Positives = 96/185 (52%), Gaps = 18/185 (9%)
+
+Query  1    EASARKLAELGARCVIVDLQDEKGEAVAKELGGLYVKAD-----VADEEQVQAAVDAAME  55
+            +A+    A+ GA  +  D+  E  +++ KE  GL  K D     V D +Q++  V+  ++
+Sbjct  19   KATTLLFAQEGATVIAGDISKENLDSLVKEAEGLPGKVDPYVLNVTDRDQIKEVVEKVVQ  78
+
+Query  56   -MGPLRALVNGAGIGSAGRTVDRNGDPMPLAQFEFVVRVNLIGTFNCTRLGAAAMAKTDP  114
+              G +  LVN AGI      V      M    ++ V+ VNL G FN T++    M K   
+Sbjct  79   KYGRIDVLVNNAGITRDALLVR-----MKEEDWDAVINVNLKGVFNVTQMVVPYMIKQ--  131
+
+Query  115  VDEDGQRGAIVNMASVAAFDGQTGQNAYSASKGGVVGMTLPIARDLVPLGIRVNTVAPGL  174
+                 + G+IVN++SV    G  GQ  Y+ASK GV+GMT   A++L    IRVN VAPG 
+Sbjct  132  -----RNGSIVNVSSVVGIYGNPGQTNYAASKAGVIGMTKTWAKELAGRNIRVNAVAPGF  186
+
+Query  175  IDTPI  179
+            I+TP+
+Sbjct  187  IETPM  191
+
+
+>sp|Q56840|HCDR_XANP2 2-(R)-hydroxypropyl-CoM dehydrogenase OS=Xanthobacter autotrophicus 
+(strain ATCC BAA-1158 / Py2) GN=xecD PE=1 SV=3 # UNIPROT 
+# Q56840 # 1.1.1.268-RXN # XAUT78245:XAUT_4868-MONOMER # 
+ 1.1.1.268
+Length=250
+
+ Score = 85.5 bits (210),  Expect = 1e-17, Method: Compositional matrix adjust.
+ Identities = 71/185 (39%), Positives = 94/185 (51%), Gaps = 16/185 (8%)
+
+Query  2    ASARKLAELGARCVIVDLQDEKGEAVAKELGGLY------VKADVADEEQVQAAVDAAME  55
+            A A +    G R   +DL  E  E  A+     Y      V+ADVADE  V AA+ A ME
+Sbjct  17   AIATRFLARGDRVAALDLSAETLEETARTHWHAYADKVLRVRADVADEGDVNAAIAATME  76
+
+Query  56   -MGPLRALVNGAGIGSAGRTVDRNGDPMPLAQFEFVVRVNLIGTFNCTRLGAAAMAKTDP  114
+              G +  LVN AGI   G +        P+ QF+ V+ VN+ G F    LG  A+    P
+Sbjct  77   QFGAIDVLVNNAGI--TGNSEAGVLHTTPVEQFDKVMAVNVRGIF----LGCRAVL---P  127
+
+Query  115  VDEDGQRGAIVNMASVAAFDGQTGQNAYSASKGGVVGMTLPIARDLVPLGIRVNTVAPGL  174
+                   G IVN+ASVA+     G++AY+ SKG V+ +T  +A D    GIR N V PG+
+Sbjct  128  HMLLQGAGVIVNIASVASLVAFPGRSAYTTSKGAVLQLTKSVAVDYAGSGIRCNAVCPGM  187
+
+Query  175  IDTPI  179
+            I+TP+
+Sbjct  188  IETPM  192
+
+
+
+Lambda     K      H
+   0.316    0.134    0.375 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 683591129
+
+
+Query= HHOT_0007
+
+Length=168
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|P31638|ACSA_CUPNH  Acetyl-coenzyme A synthetase OS=Cupriavidus...  30.4    0.41 
+sp|Q9NR19|ACSA_HUMAN  Acetyl-coenzyme A synthetase, cytoplasmic O...  29.6    0.58 
+sp|B6J6M5|PYRB_COXB1  Aspartate carbamoyltransferase OS=Coxiella ...  28.5    1.3  
+sp|C1A8J7|PYRB_GEMAT  Aspartate carbamoyltransferase OS=Gemmatimo...  28.1    1.7  
+sp|B1ZT05|PYRB_OPITP  Aspartate carbamoyltransferase OS=Opitutus ...  28.1    1.8  
+
+
+>sp|P31638|ACSA_CUPNH Acetyl-coenzyme A synthetase OS=Cupriavidus necator (strain ATCC 
+17699 / H16 / DSM 428 / Stanier 337) GN=acsA PE=3 SV=1 # 
+UNIPROT # P31638 # PROPIONATE--COA-LIGASE-RXN # REUT381666:H16_A2525-MONOMER 
+#  6.2.1.17
+Length=660
+
+ Score = 30.4 bits (67),  Expect = 0.41, Method: Composition-based stats.
+ Identities = 16/49 (33%), Positives = 24/49 (49%), Gaps = 1/49 (2%)
+
+Query  50   FYHSVTATELINRSIDLGLLLHHSQLP-SKTQLLGNYPNPFNPETWICY  97
+            FY + TA   + ++ +    +H  Q   S  +LLG    P NPE W+ Y
+Sbjct  360  FYTAPTAIRSLIKAAEADEKIHPKQYDLSSLRLLGTVGEPINPEAWMWY  408
+
+
+>sp|Q9NR19|ACSA_HUMAN Acetyl-coenzyme A synthetase, cytoplasmic OS=Homo sapiens GN=ACSS2 
+PE=1 SV=1 # UNIPROT # Q9NR19 # ACETATE--COA-LIGASE-RXN 
+# MetaCyc:ENSG00000131069-MONOMER #  6.2.1.1
+Length=701
+
+ Score = 29.6 bits (65),  Expect = 0.58, Method: Composition-based stats.
+ Identities = 16/48 (34%), Positives = 23/48 (48%), Gaps = 3/48 (6%)
+
+Query  50   FYHSVTATELINRSIDLGLLLHHSQLPSKTQLLGNYPNPFNPETWICY  97
+            FY + TA  L+ +  D  +  H     +  Q+LG    P NPE W+ Y
+Sbjct  406  FYTAPTAIRLLMKFGDEPVTKHSR---ASLQVLGTVGEPINPEAWLWY  450
+
+
+>sp|B6J6M5|PYRB_COXB1 Aspartate carbamoyltransferase OS=Coxiella burnetii (strain CbuK_Q154) 
+GN=pyrB PE=3 SV=1 # UNIPROT # B6J6M5 # ASPCARBTRANS-RXN 
+# #  2.1.3.2
+Length=310
+
+ Score = 28.5 bits (62),  Expect = 1.3, Method: Compositional matrix adjust.
+ Identities = 13/34 (39%), Positives = 19/34 (56%), Gaps = 0/34 (0%)
+
+Query  85   YPNPFNPETWICYDLADPTQTTISIHNTNGMSIR  118
+            +P P N E  I  D+AD  Q+ I     NG+++R
+Sbjct  262  HPGPVNREVEINSDVADNQQSVILQQVRNGVAMR  295
+
+
+>sp|C1A8J7|PYRB_GEMAT Aspartate carbamoyltransferase OS=Gemmatimonas aurantiaca (strain 
+T-27 / DSM 14586 / JCM 11422 / NBRC 100505) GN=pyrB PE=3 
+SV=1 # UNIPROT # C1A8J7 # ASPCARBTRANS-RXN # #  2.1.3.2
+Length=319
+
+ Score = 28.1 bits (61),  Expect = 1.7, Method: Compositional matrix adjust.
+ Identities = 25/83 (31%), Positives = 35/83 (43%), Gaps = 19/83 (22%)
+
+Query  48   HNFYHSVTATELINRSIDLGLLLHHSQLPSKTQLLGNYPNPFNPETWICYDLADPTQTTI  107
+            +N    VT+  L + S DL L+LH              P P N    I  D+AD   + I
+Sbjct  241  YNRVFGVTSARLEHASRDL-LILH--------------PGPMNRGVEIDSDVADGPHSVI  285
+
+Query  108  SIHNTNGMSIRQINL----GNQP  126
+                TNG+++R   L    G +P
+Sbjct  286  LDQVTNGVAVRMAVLYLLAGGKP  308
+
+
+>sp|B1ZT05|PYRB_OPITP Aspartate carbamoyltransferase OS=Opitutus terrae (strain DSM 
+11246 / PB90-1) GN=pyrB PE=3 SV=1 # UNIPROT # B1ZT05 # ASPCARBTRANS-RXN 
+# #  2.1.3.2
+Length=314
+
+ Score = 28.1 bits (61),  Expect = 1.8, Method: Compositional matrix adjust.
+ Identities = 16/49 (33%), Positives = 22/49 (45%), Gaps = 4/49 (8%)
+
+Query  85   YPNPFNPETWICYDLADPTQTTISIHNTNGMSIRQINL----GNQPAGI  129
+            +P P N    I  DLAD   + I     NG+++R   L    G QP  +
+Sbjct  262  HPGPINRGVEIDSDLADGDHSVILEQVNNGIAVRMAALYLCAGGQPENV  310
+
+
+
+Lambda     K      H
+   0.318    0.134    0.404 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 529686066
+
+
+Query= HHOT_0008
+
+Length=77
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|Q5BE65|TSC10_EMENI  3-ketodihydrosphingosine reductase tsc10 O...  25.0    6.8  
+sp|B8ZUG9|SYT_MYCLB  Threonyl-tRNA synthetase OS=Mycobacterium le...  24.6    8.1  
+sp|P94427|GABT_BACSU  Probable 4-aminobutyrate aminotransferase O...  24.6    8.3  
+tr|C2CZS6|C2CZS6_LACBR  Maltose phosphorylase OS=Lactobacillus br...  24.3    9.6  
+sp|Q38XG4|FABH_LACSS  3-oxoacyl-[acyl-carrier-protein] synthase 3...  24.3       10
+
+
+>sp|Q5BE65|TSC10_EMENI 3-ketodihydrosphingosine reductase tsc10 OS=Emericella nidulans 
+GN=tsc10 PE=3 SV=1 # UNIPROT # Q5BE65 # 3-DEHYDROSPHINGANINE-REDUCTASE-RXN 
+# #  1.1.1.102
+Length=357
+
+ Score = 25.0 bits (53),  Expect = 6.8, Method: Composition-based stats.
+ Identities = 10/38 (27%), Positives = 18/38 (48%), Gaps = 0/38 (0%)
+
+Query  32   PIYYSPVAGRTLEGYLASSYWGYTKHIAFVISAWLAPI  69
+            P Y+   + +TL+  + + YW        ++  WL PI
+Sbjct  133  PGYFVETSVQTLKDQMDTVYWTAANTAHAILRKWLVPI  170
+
+
+>sp|B8ZUG9|SYT_MYCLB Threonyl-tRNA synthetase OS=Mycobacterium leprae (strain Br4923) 
+GN=thrS PE=3 SV=1 # UNIPROT # B8ZUG9 # THREONINE--TRNA-LIGASE-RXN 
+# #  6.1.1.3
+Length=702
+
+ Score = 24.6 bits (52),  Expect = 8.1, Method: Composition-based stats.
+ Identities = 12/29 (42%), Positives = 15/29 (52%), Gaps = 0/29 (0%)
+
+Query  41   RTLEGYLASSYWGYTKHIAFVISAWLAPI  69
+            R L G +   +   T+H A    AWLAPI
+Sbjct  563  RALFGSIERFFGILTEHYAGAFPAWLAPI  591
+
+
+>sp|P94427|GABT_BACSU Probable 4-aminobutyrate aminotransferase OS=Bacillus subtilis 
+GN=gabT PE=3 SV=1 # UNIPROT # P94427 # GABATRANSAM-RXN # BSUB:BSU03900-MONOMER 
+#  2.6.1.22 2.6.1.19
+Length=436
+
+ Score = 24.6 bits (52),  Expect = 8.3, Method: Composition-based stats.
+ Identities = 12/32 (38%), Positives = 14/32 (44%), Gaps = 0/32 (0%)
+
+Query  15   YDWANSAFATTVMAAVLPIYYSPVAGRTLEGY  46
+            Y +    FA  V  A  P YY   AG + E Y
+Sbjct  161  YKFGFGPFAPEVYQAPFPYYYQKPAGMSDESY  192
+
+
+>tr|C2CZS6|C2CZS6_LACBR Maltose phosphorylase OS=Lactobacillus brevis subsp. gravesensis 
+ATCC 27305 GN=map4 PE=4 SV=1 # UNIPROT # C2CZS6 # MALTOSE-PHOSPHORYLASE-RXN 
+# #  2.4.1.8
+Length=785
+
+ Score = 24.3 bits (51),  Expect = 9.6, Method: Composition-based stats.
+ Identities = 9/14 (65%), Positives = 11/14 (79%), Gaps = 0/14 (0%)
+
+Query  39   AGRTLEGYLASSYW  52
+            A RT+ GY +SSYW
+Sbjct  427  AWRTINGYESSSYW  440
+
+
+>sp|Q38XG4|FABH_LACSS 3-oxoacyl-[acyl-carrier-protein] synthase 3 OS=Lactobacillus 
+sakei subsp. sakei (strain 23K) GN=fabH PE=3 SV=1 # UNIPROT 
+# Q38XG4 # RXN-9535 # LSAK314315:LSA0813-MONOMER #  2.3.1.41
+Length=326
+
+ Score = 24.3 bits (51),  Expect =    10, Method: Composition-based stats.
+ Identities = 15/47 (32%), Positives = 22/47 (47%), Gaps = 5/47 (10%)
+
+Query  18   ANSAFATTVMAAVLPIYYSPVAGRTLEGYLASSYWGYTKHIAFVISA  64
+            A S     ++A + P YY+P     ++G L     G  +  AF ISA
+Sbjct  68   AVSQIKAIIVATMTPDYYTPSTAAIVQGRL-----GADQAFAFDISA  109
+
+
+
+Lambda     K      H
+   0.323    0.132    0.440 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 216109180
+
+
+Query= HHOT_0009
+
+Length=149
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|A5W4G5|CMTB_PSEP1  2,3-dihydroxy-2,3-dihydro-p-cumate dehydrog...  28.5    1.0  
+sp|Q2J3D3|GPDA_RHOP2  Glycerol-3-phosphate dehydrogenase [NAD(P)+...  27.7    1.9  
+sp|Q5M7W7|SYPM_RAT  Probable prolyl-tRNA synthetase, mitochondria...  27.7    2.1  
+sp|P15067|GLGX_ECOLI  Glycogen debranching enzyme OS=Escherichia ...  26.9    3.3  
+tr|Q1EMV9|Q1EMV9_STRCT  5'-fluoro-5'-deoxy-adenosine phosphorylas...  26.6    3.9  
+
+
+>sp|A5W4G5|CMTB_PSEP1 2,3-dihydroxy-2,3-dihydro-p-cumate dehydrogenase OS=Pseudomonas 
+putida (strain F1 / ATCC 700007) GN=cmtB PE=3 SV=1 # UNIPROT 
+# A5W4G5 # RXN-665 # PPUT351746:PPUT_2895-MONOMER #  1.3.1.58
+Length=259
+
+ Score = 28.5 bits (62),  Expect = 1.0, Method: Compositional matrix adjust.
+ Identities = 14/28 (50%), Positives = 17/28 (61%), Gaps = 0/28 (0%)
+
+Query  5    PWFAGYRASVGEMHGLFADLRAKFAREG  32
+            P  A Y A+ G MHGL   L  +FAR+G
+Sbjct  158  PDHAAYNAAKGGMHGLTTGLAREFARQG  185
+
+
+>sp|Q2J3D3|GPDA_RHOP2 Glycerol-3-phosphate dehydrogenase [NAD(P)+] OS=Rhodopseudomonas 
+palustris (strain HaA2) GN=gpsA PE=3 SV=1 # UNIPROT # Q2J3D3 
+# GLYC3PDEHYDROGBIOSYN-RXN # RPAL316058:RPB_0316-MONOMER 
+#  1.1.1.94
+Length=329
+
+ Score = 27.7 bits (60),  Expect = 1.9, Method: Compositional matrix adjust.
+ Identities = 19/52 (37%), Positives = 27/52 (52%), Gaps = 0/52 (0%)
+
+Query  29  AREGRLLPGGLNDIRTKDGQVLADALGEEGVSLVLPLDDLAAPCSSYRHMRA  80
+           ARE R LPG   D   K  Q LA+A   + + LV+P   L +  +S + + A
+Sbjct  46  ARESRFLPGVRLDDSIKVTQDLAEAARAQALLLVVPAQVLRSVATSLQPLIA  97
+
+
+>sp|Q5M7W7|SYPM_RAT Probable prolyl-tRNA synthetase, mitochondrial OS=Rattus norvegicus 
+GN=Pars2 PE=2 SV=1 # UNIPROT # Q5M7W7 # PROLINE--TRNA-LIGASE-RXN 
+# #  6.1.1.15
+Length=475
+
+ Score = 27.7 bits (60),  Expect = 2.1, Method: Compositional matrix adjust.
+ Identities = 24/80 (30%), Positives = 32/80 (40%), Gaps = 11/80 (13%)
+
+Query  63   LPLD---DLAAPCSSYRHMRAKAETICTSELGGDLPESWAQLFKGDFVTTEGTALGQGPE  119
+            LP+D   D    C S  H  A  E +       DL +      +G    T+G  +G    
+Sbjct  261  LPVDIGEDRLVVCPSC-HFSANTEIV-------DLSQKICPDCQGPLTETKGIEVGHTFY  312
+
+Query  120  VCRRNSSFTNTHFRNPHVES  139
+            +  + SS  N HF N H ES
+Sbjct  313  LGTKYSSIFNAHFTNAHGES  332
+
+
+>sp|P15067|GLGX_ECOLI Glycogen debranching enzyme OS=Escherichia coli (strain K12) 
+GN=glgX PE=1 SV=3 # UNIPROT # P15067 # RXN0-5146 # MetaCyc:EG10381-MONOMER 
+#  NIL
+Length=657
+
+ Score = 26.9 bits (58),  Expect = 3.3, Method: Compositional matrix adjust.
+ Identities = 15/45 (34%), Positives = 19/45 (43%), Gaps = 0/45 (0%)
+
+Query  10   YRASVGEMHGLFADLRAKFAREGRLLPGGLNDIRTKDGQVLADAL  54
+            Y   +G   G FA     F R GRL    +N +   DG  L D +
+Sbjct  407  YDLPLGAFAGRFAASSDVFKRNGRLPSAAINLVTAHDGFTLRDCV  451
+
+
+>tr|Q1EMV9|Q1EMV9_STRCT 5'-fluoro-5'-deoxy-adenosine phosphorylase OS=Streptomyces cattleya 
+GN=flB PE=4 SV=1 # UNIPROT # Q1EMV9 # RXN-11743 # #  
+NIL
+Length=299
+
+ Score = 26.6 bits (57),  Expect = 3.9, Method: Compositional matrix adjust.
+ Identities = 26/88 (30%), Positives = 39/88 (45%), Gaps = 3/88 (3%)
+
+Query  10   YRASVGEMHGLFADLRAKFAREGRLLPGGLNDIRTKDG-QVLADALGEEGVSLVLPLDDL  68
+            YRA   ++ G+ A   AK ARE  L   GL+ +   D      D++    V+ V+  + +
+Sbjct  185  YRAWGMDVIGMTAQPEAKLAREAELCYAGLSLVTDYDCWHTGHDSVDARTVAEVMAANVI  244
+
+Query  69   AAPC--SSYRHMRAKAETICTSELGGDL  94
+            AA    S   H  A A+  C   L G +
+Sbjct  245  AARAVLSGLAHATAPADCACHHALDGAV  272
+
+
+
+Lambda     K      H
+   0.319    0.136    0.425 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 417001063
+
+
+Query= HHOT_0010
+
+Length=209
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|C1D890|CYSN_LARHH  Sulfate adenylyltransferase subunit 1 OS=La...  30.8    0.48 
+sp|Q8FP55|THIE_COREF  Thiamine-phosphate pyrophosphorylase OS=Cor...  27.7    4.0  
+sp|Q0ARD7|PDXH_MARMM  Pyridoxine/pyridoxamine 5'-phosphate oxidas...  26.9    5.9  
+sp|P52046|CRT_CLOAB  3-hydroxybutyryl-CoA dehydratase OS=Clostrid...  26.6    7.2  
+sp|Q5FQ88|PANC_GLUOX  Pantothenate synthetase OS=Gluconobacter ox...  26.2       11
+
+
+>sp|C1D890|CYSN_LARHH Sulfate adenylyltransferase subunit 1 OS=Laribacter hongkongensis 
+(strain HLHK9) GN=cysN PE=3 SV=1 # UNIPROT # C1D890 # SULFATE-ADENYLYLTRANS-RXN 
+# #  2.7.7.4
+Length=481
+
+ Score = 30.8 bits (68),  Expect = 0.48, Method: Compositional matrix adjust.
+ Identities = 29/136 (22%), Positives = 55/136 (41%), Gaps = 22/136 (16%)
+
+Query  9    STGRGYFAHAGNWLELVNKEIDGRVGLGTEQYFINSIVSTSTTATSLNVTGVTTAVTVDI  68
+             TGR Y      W++L  K + GRV     +  +N++   + ++ +LN       VT++I
+Sbjct  347  QTGRAY------WVKLAGKWLPGRVTAVHHRVNVNTMEREAASSLALNEIA---EVTLEI  397
+
+Query  69   NGDLDVDGHTNLDNV-------NVAGVTTFAGIIEGVQGQNKIPSLYGAMTDLPSASSYH  121
+            +  + VD +              ++  T  AG+I   +     PS  G  ++  +A  + 
+Sbjct  398  DAPMAVDAYRQCRATGSLILVDRISNATLGAGMIRSAE-----PS-AGIQSEKDAARRWQ  451
+
+Query  122  GMFAHVHATARGYFAH  137
+                  +   R +F H
+Sbjct  452  AFEIEFNELVRRHFPH  467
+
+
+>sp|Q8FP55|THIE_COREF Thiamine-phosphate pyrophosphorylase OS=Corynebacterium efficiens 
+GN=thiE PE=3 SV=1 # UNIPROT # Q8FP55 # THI-P-SYN-RXN # 
+CEFF196164:CE1933-MONOMER #  2.5.1.3
+Length=216
+
+ Score = 27.7 bits (60),  Expect = 4.0, Method: Compositional matrix adjust.
+ Identities = 53/210 (26%), Positives = 82/210 (40%), Gaps = 38/210 (18%)
+
+Query  1    HGMFAHVHSTGRGYFAHAGNWLELVNKEIDGRVGLGTEQYFINSIVSTSTTATSLNVTGV  60
+            HG   H+    R   A     +++ +K I  R     E Y +       T A +L V G 
+Sbjct  15   HGSHEHIVDVARRAVAGGARTVQVRSKPITAR-----ELYAL-------TEAVALAV-GE  61
+
+Query  61   TTAVTVDINGDLDVDGHTNLDNVNVAGVTTFAGI-IEGVQ-GQNKIP-----SLYG--AM  111
+            T  V VD             D V++A      G+ + GV  GQ+ +P     +L G  A+
+Sbjct  62   TAHVLVD-------------DRVDIALALRHRGLPVHGVHVGQDDLPVRDVRALLGEEAI  108
+
+Query  112  TDLPSASSYHGMFAHVHATARGYFAHAGNWLELVNKESNGTVGTGTETYN-IANLTATSI  170
+              L + +      A+ HA    Y   AG +     K+S G    G E Y  +  L+   +
+Sbjct  109  IGLTTGTRELVEAANEHAEVLDYIG-AGPFRPTPTKDS-GRPPLGVEGYRELVELSRLPV  166
+
+Query  171  DLNGDIDVDGHTNLDNVSIAGVTTTAGLLD  200
+               GD+  D    L +  +AG+    GL++
+Sbjct  167  VAIGDVTADDAPALADTGVAGLAVVRGLME  196
+
+
+>sp|Q0ARD7|PDXH_MARMM Pyridoxine/pyridoxamine 5'-phosphate oxidase OS=Maricaulis maris 
+(strain MCS10) GN=pdxH PE=3 SV=1 # UNIPROT # Q0ARD7 # PNPOXI-RXN 
+# MMAR394221:MMAR10_0857-MONOMER #  1.4.3.5 1.4.3.5
+Length=222
+
+ Score = 26.9 bits (58),  Expect = 5.9, Method: Compositional matrix adjust.
+ Identities = 18/56 (33%), Positives = 26/56 (47%), Gaps = 4/56 (7%)
+
+Query  135  FAHAGNWL-ELVNKESNGTVGTGTETYNIANLTATSIDLNGDIDVDG---HTNLDN  186
+            FA   +WL E   KE N        T + + L    + L  D+D DG   +TNL++
+Sbjct  34   FALFADWLTEAKKKEPNDANAMALATADASGLPDVRMVLLKDVDADGFVFYTNLES  89
+
+
+>sp|P52046|CRT_CLOAB 3-hydroxybutyryl-CoA dehydratase OS=Clostridium acetobutylicum 
+GN=crt PE=3 SV=1 # UNIPROT # P52046 # 3-HYDROXBUTYRYL-COA-DEHYDRATASE-RXN 
+# MetaCyc:CRTCLOS-MONOMER #  4.2.1.55
+Length=261
+
+ Score = 26.6 bits (57),  Expect = 7.2, Method: Compositional matrix adjust.
+ Identities = 17/68 (25%), Positives = 29/68 (43%), Gaps = 0/68 (0%)
+
+Query  2    GMFAHVHSTGRGYFAHAGNWLELVNKEIDGRVGLGTEQYFINSIVSTSTTATSLNVTGVT  61
+            GM   +  T +   A     + LVNK ++    + T +   N IVS +  A  L+   + 
+Sbjct  156  GMAKQLIFTAQNIKADEALRIGLVNKVVEPSELMNTAKEIANKIVSNAPVAVKLSKQAIN  215
+
+Query  62   TAVTVDIN  69
+              +  DI+
+Sbjct  216  RGMQCDID  223
+
+
+>sp|Q5FQ88|PANC_GLUOX Pantothenate synthetase OS=Gluconobacter oxydans GN=panC PE=3 
+SV=1 # UNIPROT # Q5FQ88 # PANTOATE-BETA-ALANINE-LIG-RXN # GOXY290633:GOX1718-MONOMER 
+#  6.3.2.1
+Length=275
+
+ Score = 26.2 bits (56),  Expect =    11, Method: Compositional matrix adjust.
+ Identities = 15/30 (50%), Positives = 18/30 (60%), Gaps = 4/30 (13%)
+
+Query  173  NGDIDVDGHTNLDNVSIAGVTTTAGLLDID  202
+            NG+ DVD   N    ++  V T AGLLDID
+Sbjct  211  NGERDVDILEN----AMRAVLTEAGLLDID  236
+
+
+
+Lambda     K      H
+   0.314    0.132    0.385 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 789236487
+
+
+Query= HHOT_0011
+
+Length=158
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|Q1DAN8|PANC_MYXXD  Pantothenate synthetase OS=Myxococcus xanth...  29.6    0.55 
+sp|Q46DR6|SYR_METBF  Arginyl-tRNA synthetase OS=Methanosarcina ba...  29.3    0.71 
+sp|Q11YW2|SYD_CYTH3  Aspartyl-tRNA synthetase OS=Cytophaga hutchi...  27.7    1.9  
+sp|P76041|SUCP_ECOLI  Putative sucrose phosphorylase OS=Escherich...  27.7    2.0  
+sp|B2A5S2|MTNA_NATTJ  Methylthioribose-1-phosphate isomerase OS=N...  27.3    2.8  
+
+
+>sp|Q1DAN8|PANC_MYXXD Pantothenate synthetase OS=Myxococcus xanthus (strain DK 1622) 
+GN=panC PE=3 SV=1 # UNIPROT # Q1DAN8 # PANTOATE-BETA-ALANINE-LIG-RXN 
+# MXAN246197:MXAN_2056-MONOMER #  6.3.2.1
+Length=292
+
+ Score = 29.6 bits (65),  Expect = 0.55, Method: Compositional matrix adjust.
+ Identities = 24/72 (34%), Positives = 35/72 (49%), Gaps = 3/72 (4%)
+
+Query  72   FVHTGAIEACIKEGYTRGPYWCLKEFVDNPEVGPKGVLSREQEASIKADYDRVVIAAAQP  131
+            F+H G + + I+EG  R     +  FV+  + GPK  LSR      + D  + + A AQ 
+Sbjct  34   FLHEGHL-SLIREGRRRADVVAVSIFVNPTQFGPKEDLSRYPR-DFEGDVAKCISAGAQA  91
+
+Query  132  I-ATAVPTTLNP  142
+            I A A P  + P
+Sbjct  92   IFAPAGPEVMYP  103
+
+
+>sp|Q46DR6|SYR_METBF Arginyl-tRNA synthetase OS=Methanosarcina barkeri (strain Fusaro 
+/ DSM 804) GN=argS PE=3 SV=1 # UNIPROT # Q46DR6 # ARGININE--TRNA-LIGASE-RXN 
+# MBAR269797:MBAR_A1008-MONOMER #  6.1.1.19
+Length=569
+
+ Score = 29.3 bits (64),  Expect = 0.71, Method: Composition-based stats.
+ Identities = 30/107 (29%), Positives = 45/107 (43%), Gaps = 15/107 (14%)
+
+Query  35   FYPGRDLPRQLTGNPHDKNYGSNDGKINTYHFNFKDVFVHTGAIEACIKEGYTRGPYWCL  94
+             Y  RDL        H+   G  D  I+ +  + K +   +G + A +     + P   +
+Sbjct  308  LYTTRDLAY------HEWKAGQADRIIDIFGADHKLI---SGQLRATLNSIGVKEPEVVI  358
+
+Query  95   KEFVDNPEVGPKGVLSREQEASIKAD--YDRVVIAAAQPIATAVPTT  139
+             EFV  PE    G +S  +   I AD  +DRV  AA + + T  P T
+Sbjct  359  FEFVSLPE----GSMSTRRGQFISADELFDRVTEAALEQVETRRPET  401
+
+
+>sp|Q11YW2|SYD_CYTH3 Aspartyl-tRNA synthetase OS=Cytophaga hutchinsonii (strain ATCC 
+33406 / NCIMB 9469) GN=aspS PE=3 SV=1 # UNIPROT # Q11YW2 
+# ASPARTATE--TRNA-LIGASE-RXN # CHUT269798:CHU_0111-MONOMER # 
+ 6.1.1.12
+Length=616
+
+ Score = 27.7 bits (60),  Expect = 1.9, Method: Compositional matrix adjust.
+ Identities = 14/31 (46%), Positives = 18/31 (59%), Gaps = 2/31 (6%)
+
+Query  79   EACIKEGYTRGPYWCLKEFVDNPEVGPKGVL  109
+            E C +  YTR     L EFV  P+VG KG++
+Sbjct  322  EGCAE--YTRKEIDALTEFVKRPQVGAKGMV  350
+
+
+>sp|P76041|SUCP_ECOLI Putative sucrose phosphorylase OS=Escherichia coli (strain K12) 
+GN=ycjM PE=3 SV=2 # UNIPROT # P76041 # SUCROSE-PHOSPHORYLASE-RXN 
+# EcoCyc:G6647-MONOMER #  2.4.1.7
+Length=559
+
+ Score = 27.7 bits (60),  Expect = 2.0, Method: Composition-based stats.
+ Identities = 10/24 (42%), Positives = 16/24 (67%), Gaps = 0/24 (0%)
+
+Query  7    HRDMYKEFGANESKPNMVYKFIIP  30
+            H+D    FGA + + +MVY+F +P
+Sbjct  276  HKDNIAYFGAGDDEAHMVYQFSLP  299
+
+
+>sp|B2A5S2|MTNA_NATTJ Methylthioribose-1-phosphate isomerase OS=Natranaerobius thermophilus 
+(strain ATCC BAA-1301 / DSM 18059 / JW/NM-WN-LF) GN=mtnA 
+PE=3 SV=1 # UNIPROT # B2A5S2 # 5.3.1.23-RXN # #  5.3.1.23
+Length=347
+
+ Score = 27.3 bits (59),  Expect = 2.8, Method: Compositional matrix adjust.
+ Identities = 12/29 (42%), Positives = 16/29 (56%), Gaps = 0/29 (0%)
+
+Query  46   TGNPHDKNYGSNDGKINTYHFNFKDVFVH  74
+            TG      YG+  G I   H+N KD+FV+
+Sbjct  162  TGALATTGYGTALGVIRQAHYNHKDIFVY  190
+
+
+
+Lambda     K      H
+   0.319    0.138    0.425 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 470129085
+
+
+Query= HHOT_0012
+
+Length=220
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|B0THN7|DXR_HELMI  1-deoxy-D-xylulose 5-phosphate reductoisomer...   204    3e-53
+sp|Q2RJN4|DXR_MOOTA  1-deoxy-D-xylulose 5-phosphate reductoisomer...   199    8e-52
+sp|A5WGE7|DXR_PSYWF  1-deoxy-D-xylulose 5-phosphate reductoisomer...   199    8e-52
+sp|B7J9P7|DXR_ACIF2  1-deoxy-D-xylulose 5-phosphate reductoisomer...   197    3e-51
+sp|A4J5Y5|DXR_DESRM  1-deoxy-D-xylulose 5-phosphate reductoisomer...   197    4e-51
+
+
+>sp|B0THN7|DXR_HELMI 1-deoxy-D-xylulose 5-phosphate reductoisomerase OS=Heliobacterium 
+modesticaldum (strain ATCC 51547 / Ice1) GN=dxr PE=3 SV=1 
+# UNIPROT # B0THN7 # DXPREDISOM-RXN # HMOD498761:HM1_2264-MONOMER 
+#  1.1.1.267
+Length=391
+
+ Score =  204 bits (518),  Expect = 3e-53, Method: Compositional matrix adjust.
+ Identities = 89/195 (46%), Positives = 134/195 (69%), Gaps = 0/195 (0%)
+
+Query  20   VDIVIAGIVGLAGLPPLLESIKSSKKVCIANKECFVSAGSLIMNEANKYKTQILPLDSEH  79
+            VD V+  + G  GL P + +I++ K++ +ANKE  V+AG L+M  A + +  ILP+DSEH
+Sbjct  95   VDTVVTAVSGAIGLGPTMAAIEAGKEIALANKETLVAAGPLVMAAARRREVTILPVDSEH  154
+
+Query  80   SAIFQILENTNNVVKDIFLTASGGPFYKYSSDELLKVKVDDAIKNPNWVMGKKISVDSAT  139
+            SAIFQ L+  +  +  + LTASGGPF   S + L +V  +DA+++PNW MG KI++DSA+
+Sbjct  155  SAIFQCLQGQDRRLARLILTASGGPFRDKSLEALHQVTPEDALRHPNWRMGPKITIDSAS  214
+
+Query  140  LMNKGLEIIEAKHLFNLDESKIKVVIHRQSIAHGIVSFEDNTFLTAFGYPDMTHPVKYAI  199
+            LMNKGLE+IEA+ LF++D   I+V+IH QSI H +V F D + L+  G PDM  P++YA+
+Sbjct  215  LMNKGLEVIEARWLFDIDFDDIEVLIHPQSIVHSMVEFADGSILSQMGLPDMRLPIQYAL  274
+
+Query  200  FHPKNYNNKSQKMNI  214
+             +P+ +     +++I
+Sbjct  275  TYPERWQTGWPRLDI  289
+
+
+>sp|Q2RJN4|DXR_MOOTA 1-deoxy-D-xylulose 5-phosphate reductoisomerase OS=Moorella thermoacetica 
+(strain ATCC 39073) GN=dxr PE=3 SV=1 # UNIPROT 
+# Q2RJN4 # DXPREDISOM-RXN # MTHE264732:MOTH_1041-MONOMER #  
+1.1.1.267
+Length=385
+
+ Score =  199 bits (506),  Expect = 8e-52, Method: Compositional matrix adjust.
+ Identities = 89/202 (45%), Positives = 133/202 (66%), Gaps = 1/202 (0%)
+
+Query  19   SVDIVIAGIVGLAGLPPLLESIKSSKKVCIANKECFVSAGSLIMNEANKYKTQILPLDSE  78
+             V++V+A +VG+  L  +L ++++ K + +ANKE  V+AG L+M+ A +   QI+P+DSE
+Sbjct  92   GVELVVAAMVGIRSLKAILAALEAGKDIALANKEVLVAAGQLVMDRARRLSRQIIPVDSE  151
+
+Query  79   HSAIFQILENTNNVVKDIFLTASGGPFYKYSSDELLKVKVDDAIKNPNWVMGKKISVDSA  138
+            HSAIFQ L     V  ++ +TASGGP  +    E+  V  + A+ +P WVMG KI++DSA
+Sbjct  152  HSAIFQCLRQGGRVA-EVIITASGGPLRQMPRAEMANVTPEQALNHPTWVMGPKITIDSA  210
+
+Query  139  TLMNKGLEIIEAKHLFNLDESKIKVVIHRQSIAHGIVSFEDNTFLTAFGYPDMTHPVKYA  198
+            TLMNKGLE+IEAKHLFNLD  +IKV+IH QS+ H +V + D       G  DM  P++YA
+Sbjct  211  TLMNKGLEVIEAKHLFNLDFDQIKVLIHPQSVVHALVRYSDGALFAQLGPADMRLPIQYA  270
+
+Query  199  IFHPKNYNNKSQKMNIELLNNL  220
+            +  P+ ++   Q +++  L +L
+Sbjct  271  LTWPERWDLDVQPLDLAALGHL  292
+
+
+>sp|A5WGE7|DXR_PSYWF 1-deoxy-D-xylulose 5-phosphate reductoisomerase OS=Psychrobacter 
+sp. (strain PRwf-1) GN=dxr PE=3 SV=1 # UNIPROT # A5WGE7 
+# DXPREDISOM-RXN # PSP56811:PSYCPRWF_1798-MONOMER #  1.1.1.267
+Length=411
+
+ Score =  199 bits (506),  Expect = 8e-52, Method: Compositional matrix adjust.
+ Identities = 99/212 (47%), Positives = 138/212 (66%), Gaps = 11/212 (5%)
+
+Query  20   VDIVIAGIVGLAGLPPLLESIKSSKKVCIANKECFVSAGSLIMNEANKYKTQILPLDSEH  79
+            VD V+A IVG AGL   L + K+ K+V +ANKE  V AGSL+M         +LPLDSEH
+Sbjct  94   VDTVVAAIVGAAGLASTLSAAKAGKRVLLANKEALVMAGSLMMQAVRDNGATLLPLDSEH  153
+
+Query  80   SAIFQIL-----------ENTNNVVKDIFLTASGGPFYKYSSDELLKVKVDDAIKNPNWV  128
+            +AIFQ L            + ++ VK ++LTASGGPF   + +++    V +A+K+PNW 
+Sbjct  154  NAIFQCLPPQIQQNNTAIHDASHGVKKLWLTASGGPFLNKTWEQMQAASVSEAVKHPNWS  213
+
+Query  129  MGKKISVDSATLMNKGLEIIEAKHLFNLDESKIKVVIHRQSIAHGIVSFEDNTFLTAFGY  188
+            MG+KISVDSAT+MNKGLE+IEA HLF+L ES+I VVIH QSI H +V + D +FL   G 
+Sbjct  214  MGQKISVDSATMMNKGLELIEACHLFDLAESQINVVIHPQSIIHSLVEYCDGSFLAQMGS  273
+
+Query  189  PDMTHPVKYAIFHPKNYNNKSQKMNIELLNNL  220
+            PDM  P+ +A+ +P   +   + +++  L++L
+Sbjct  274  PDMRTPIAHALAYPNRISAGVESLDLYQLSSL  305
+
+
+>sp|B7J9P7|DXR_ACIF2 1-deoxy-D-xylulose 5-phosphate reductoisomerase OS=Acidithiobacillus 
+ferrooxidans (strain ATCC 23270 / DSM 14882 / NCIB 8455) 
+GN=dxr PE=3 SV=1 # UNIPROT # B7J9P7 # DXPREDISOM-RXN # 
+#  1.1.1.267
+Length=393
+
+ Score =  197 bits (501),  Expect = 3e-51, Method: Compositional matrix adjust.
+ Identities = 93/204 (46%), Positives = 134/204 (66%), Gaps = 1/204 (0%)
+
+Query  11   VCKSVQKVSVDIVIAGIVGLAGLPPLLESIKSSKKVCIANKECFVSAGSLIMNEANKYKT  70
+            + ++ +   VD V+A IVG AGL P L ++++ KKV +ANKEC V AG+L M    +++ 
+Sbjct  89   LAEAARMSGVDEVMAAIVGAAGLLPTLAAVEAGKKVYLANKECLVMAGNLFMERVRQHQV  148
+
+Query  71   QILPLDSEHSAIFQILENTNNVVKDIFLTASGGPFYKYSSDELLKVKVDDAIKNPNWVMG  130
+             +LP+DSEH+A+FQ   +   V + I LTASGGPF  + ++ L  V  D A  +PNWVMG
+Sbjct  149  TLLPIDSEHNAVFQCFADGKGV-RRILLTASGGPFRTWPAEHLAVVTPDQACAHPNWVMG  207
+
+Query  131  KKISVDSATLMNKGLEIIEAKHLFNLDESKIKVVIHRQSIAHGIVSFEDNTFLTAFGYPD  190
+            +KISVDSAT+MNKGLE+IEA  LF+L  S+I V+IH QSI H +V + D + L   G PD
+Sbjct  208  RKISVDSATMMNKGLEVIEAHWLFDLPASRIDVMIHPQSIIHSMVEYVDGSVLAQLGNPD  267
+
+Query  191  MTHPVKYAIFHPKNYNNKSQKMNI  214
+            M  P+ +A+  P+   +    +++
+Sbjct  268  MRTPIAHALAFPERMESGVSSLDL  291
+
+
+>sp|A4J5Y5|DXR_DESRM 1-deoxy-D-xylulose 5-phosphate reductoisomerase OS=Desulfotomaculum 
+reducens (strain MI-1) GN=dxr PE=3 SV=1 # UNIPROT # A4J5Y5 
+# DXPREDISOM-RXN # DRED349161:DRED_1970-MONOMER #  1.1.1.267
+Length=387
+
+ Score =  197 bits (500),  Expect = 4e-51, Method: Compositional matrix adjust.
+ Identities = 95/200 (48%), Positives = 134/200 (67%), Gaps = 1/200 (0%)
+
+Query  22   IVIAGIVGLAGLPPLLESIKSSKKVCIANKECFVSAGSLIMNEANKYKTQILPLDSEHSA  81
+            +V+  + G  GL P   +IK+SKK+ +ANKE  V+AG  +   A +YK +ILP+DSEHSA
+Sbjct  97   VVVTALSGAIGLVPTCAAIKASKKIALANKETLVAAGQYVTKLAEEYKVEILPVDSEHSA  156
+
+Query  82   IFQILENTN-NVVKDIFLTASGGPFYKYSSDELLKVKVDDAIKNPNWVMGKKISVDSATL  140
+            I+Q L   N + ++ I LTASGGPF + +  EL  V  + A+K+PNW MG+KI++DSATL
+Sbjct  157  IWQCLHGENRSAIRKIQLTASGGPFRQLNRQELENVTPEMALKHPNWSMGQKITIDSATL  216
+
+Query  141  MNKGLEIIEAKHLFNLDESKIKVVIHRQSIAHGIVSFEDNTFLTAFGYPDMTHPVKYAIF  200
+            MNKGLE+IEAK LF +D   I VV+H QS+ H +V + D + L   G PDM  P++YA+ 
+Sbjct  217  MNKGLEVIEAKWLFGVDYDDINVVVHPQSVIHSMVEYGDGSLLAHLGMPDMRIPIQYALS  276
+
+Query  201  HPKNYNNKSQKMNIELLNNL  220
+            +P+ + N   K+N+  L  L
+Sbjct  277  YPERWFNHLPKLNLTELKGL  296
+
+
+
+Lambda     K      H
+   0.317    0.133    0.375 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 853820111
+
+
+Query= HHOT_0013
+
+Length=33
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|Q5ZRS2|AROE_LEGPH  Shikimate dehydrogenase OS=Legionella pneum...  23.9       14
+sp|B2V7Q4|TRPF_SULSY  N-(5'-phosphoribosyl)anthranilate isomerase...  23.1       23
+sp|B9LZU2|COBT_GEOSF  Nicotinate-nucleotide--dimethylbenzimidazol...  22.7       32
+sp|Q12659|ARO1_PNECA  Pentafunctional AROM polypeptide OS=Pneumoc...  22.3       37
+sp|Q41233|ALLN2_ALLSA  Alliin lyase 2 OS=Allium sativum PE=1 SV=1...  22.3       42
+
+
+>sp|Q5ZRS2|AROE_LEGPH Shikimate dehydrogenase OS=Legionella pneumophila subsp. pneumophila 
+(strain Philadelphia 1 / ATCC 33152 / DSM 7513) GN=aroE 
+PE=3 SV=1 # UNIPROT # Q5ZRS2 # SHIKIMATE-5-DEHYDROGENASE-RXN 
+# LPNE272624:LPG2808-MONOMER #  1.1.1.25
+Length=265
+
+ Score = 23.9 bits (50),  Expect =    14, Method: Composition-based stats.
+ Identities = 9/21 (43%), Positives = 16/21 (77%), Gaps = 0/21 (0%)
+
+Query  6   FANESDLELIKTKIIYDEVEY  26
+           FA ++ +ELI  KI+ D+V++
+Sbjct  24  FAQQTQIELIYEKILGDDVKF  44
+
+
+>sp|B2V7Q4|TRPF_SULSY N-(5'-phosphoribosyl)anthranilate isomerase OS=Sulfurihydrogenibium 
+sp. (strain YO3AOP1) GN=trpF PE=3 SV=1 # UNIPROT # B2V7Q4 
+# PRAISOM-RXN # #  5.3.1.24
+Length=203
+
+ Score = 23.1 bits (48),  Expect =    23, Method: Compositional matrix adjust.
+ Identities = 11/16 (69%), Positives = 12/16 (75%), Gaps = 0/16 (0%)
+
+Query  2    EAICFANESDLELIKT  17
+            +AI   NESDLE IKT
+Sbjct  97   KAIRVKNESDLEKIKT  112
+
+
+>sp|B9LZU2|COBT_GEOSF Nicotinate-nucleotide--dimethylbenzimidazole phosphoribosyltransferase 
+OS=Geobacter sp. (strain FRC-32) GN=cobT PE=3 SV=1 
+# UNIPROT # B9LZU2 # DMBPPRIBOSYLTRANS-RXN # #  2.4.2.21
+Length=354
+
+ Score = 22.7 bits (47),  Expect =    32, Method: Composition-based stats.
+ Identities = 8/12 (67%), Positives = 11/12 (92%), Gaps = 0/12 (0%)
+
+Query  10  SDLELIKTKIIY  21
+           SDLEL+ TK++Y
+Sbjct  56  SDLELLGTKVVY  67
+
+
+>sp|Q12659|ARO1_PNECA Pentafunctional AROM polypeptide OS=Pneumocystis carinii GN=arom 
+PE=3 SV=1 # UNIPROT # Q12659 # SHIKIMATE-KINASE-RXN # # 
+ 2.5.1.19 4.2.1.10 4.2.3.4 1.1.1.25 2.7.1.71
+Length=1581
+
+ Score = 22.3 bits (46),  Expect =    37, Method: Compositional matrix adjust.
+ Identities = 10/14 (72%), Positives = 12/14 (86%), Gaps = 0/14 (0%)
+
+Query  13   ELIKTKIIYDEVEY  26
+            ELIKT II+DE E+
+Sbjct  191  ELIKTIIIWDESEF  204
+
+
+>sp|Q41233|ALLN2_ALLSA Alliin lyase 2 OS=Allium sativum PE=1 SV=1 # UNIPROT # Q41233 
+# RXN-8898 # MetaCyc:MONOMER-13491 #  NIL
+Length=473
+
+ Score = 22.3 bits (46),  Expect =    42, Method: Composition-based stats.
+ Identities = 9/19 (48%), Positives = 13/19 (69%), Gaps = 0/19 (0%)
+
+Query  12   LELIKTKIIYDEVEYYFGD  30
+            L LIKT+  +D++ YY  D
+Sbjct  427  LSLIKTQDDFDQLMYYLKD  445
+
+
+
+Lambda     K      H
+   0.318    0.145    0.426 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 216138075
+
+
+Query= HHOT_0014
+
+Length=185
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+tr|Q56687|Q56687_VIBFI  Autoinducer synthase OS=Vibrio fischeri G...  31.6    0.21 
+sp|A6W4E9|KDUI_KINRD  4-deoxy-L-threo-5-hexosulose-uronate ketol-...  30.4    0.47 
+sp|P37666|GHRB_ECOLI  Glyoxylate/hydroxypyruvate reductase B OS=E...  29.3    1.0  
+sp|Q1GQ92|TYPH_SPHAL  Putative thymidine phosphorylase OS=Sphingo...  27.7    2.7  
+sp|A7GU91|MEND_BACCN  2-succinyl-5-enolpyruvyl-6-hydroxy-3-cycloh...  26.6    6.3  
+
+
+>tr|Q56687|Q56687_VIBFI Autoinducer synthase OS=Vibrio fischeri GN=ainS PE=4 SV=1 # UNIPROT 
+# Q56687 # 2.3.1.184-RXN # MetaCyc:MONOMER-14568 #  2.3.1.184
+Length=395
+
+ Score = 31.6 bits (70),  Expect = 0.21, Method: Compositional matrix adjust.
+ Identities = 22/91 (25%), Positives = 42/91 (47%), Gaps = 12/91 (13%)
+
+Query  45   YVNNHYSVQTMELPNGITYLSIKRLKKEARHDWRELWRIKNELTSENREAI-------EL  97
+            + +  +S Q + L + I  ++I    KE  H W E+     +++S+    I        L
+Sbjct  145  FFHTEFSDQPLPLSDAIVLINIATFVKE--HKWYEMLN-HLDISSKGEHFILYQYTENNL  201
+
+Query  98   YPA--ASRVVDTSNQYHLWVMPDGWWVPLGW  126
+            YP   +S ++ T++  H W+  DG++    W
+Sbjct  202  YPTIISSALIQTTSNKHEWLFFDGFFQNTKW  232
+
+
+>sp|A6W4E9|KDUI_KINRD 4-deoxy-L-threo-5-hexosulose-uronate ketol-isomerase OS=Kineococcus 
+radiotolerans (strain ATCC BAA-149 / DSM 14245 / SRS30216) 
+GN=kduI PE=3 SV=1 # UNIPROT # A6W4E9 # 5.3.1.17-RXN # 
+KRAD266940:KRAD_0197-MONOMER #  5.3.1.17
+Length=279
+
+ Score = 30.4 bits (67),  Expect = 0.47, Method: Compositional matrix adjust.
+ Identities = 38/157 (25%), Positives = 57/157 (37%), Gaps = 21/157 (13%)
+
+Query  8    RAALRKKPKQRATP---IKQGGWTPFKLDEELSARMRTPCYVNNHYSVQTMELPNGITYL  64
+            R  L   P   A P   ++ GG T  +L ++L+A  RT     +   V++ ++  G+T L
+Sbjct  126  RFYLFSAPAHTAHPTTLVEAGGGTVRELGDQLTANRRTLNQYVHENGVKSCQVVMGVTTL  185
+
+Query  65   SIKRLKKEARHDWRELWRIKNELTSENREAIELY---PAASRVVDTSNQ----YHLWVMP  117
+                            W      T + R  + LY   PA  RVV    Q     HL V  
+Sbjct  186  HPG-----------STWNTMPAHTHDRRTEVYLYFGLPAGDRVVHLLGQPAETRHLLVAD  234
+
+Query  118  DGWWVPLGWTKAEVTDDATDRYKWGKARQRRLPEWMD  154
+                V   W+       A   + W  A + +  + MD
+Sbjct  235  GQAVVSPSWSIHSGVGTAAYSFVWAMAGENQAFDDMD  271
+
+
+>sp|P37666|GHRB_ECOLI Glyoxylate/hydroxypyruvate reductase B OS=Escherichia coli (strain 
+K12) GN=ghrB PE=1 SV=3 # UNIPROT # P37666 # 1.1.1.215-RXN 
+# MetaCyc:MONOMER-43 #  1.1.1.215
+Length=324
+
+ Score = 29.3 bits (64),  Expect = 1.0, Method: Compositional matrix adjust.
+ Identities = 21/60 (35%), Positives = 26/60 (44%), Gaps = 5/60 (8%)
+
+Query  2    SRRNRRRAALRKKPKQRATPIKQGGWTPFKLDEELSAR----MRTPCYVNNHYSVQTMEL  57
+            S  N   A L K PK RAT     G+  F +D  L+AR    M TP  +    +   M L
+Sbjct  52   SNENVNAALLEKMPKLRATSTISVGYDNFDVD-ALTARKILLMHTPTVLTETVADTLMAL  110
+
+
+>sp|Q1GQ92|TYPH_SPHAL Putative thymidine phosphorylase OS=Sphingopyxis alaskensis GN=Sala_2473 
+PE=3 SV=1 # UNIPROT # Q1GQ92 # THYM-PHOSPH-RXN # 
+SALA317655:SALA_2473-MONOMER #  2.4.2.4
+Length=514
+
+ Score = 27.7 bits (60),  Expect = 2.7, Method: Compositional matrix adjust.
+ Identities = 16/48 (34%), Positives = 26/48 (55%), Gaps = 1/48 (2%)
+
+Query  27   WTPFKLDEELSARMRTPCYVNNHYSVQTMELPNGITYLSIKRLKKEAR  74
+            W+ F+   E    MRTP  ++NH  V T + P  ++ +  +RL K A+
+Sbjct  410  WSKFQRICEAQGGMRTP-PLSNHRHVMTAQRPGRVSAIDNRRLAKLAK  456
+
+
+>sp|A7GU91|MEND_BACCN 2-succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylate 
+synthase OS=Bacillus cereus subsp. cytotoxis (strain NVH 391-98) 
+GN=menD PE=3 SV=1 # UNIPROT # A7GU91 # 2.5.1.64-RXN # 
+BCER315749:BCER98_3493-MONOMER #  2.2.1.9
+Length=584
+
+ Score = 26.6 bits (57),  Expect = 6.3, Method: Composition-based stats.
+ Identities = 10/35 (29%), Positives = 19/35 (55%), Gaps = 0/35 (0%)
+
+Query  67   KRLKKEARHDWRELWRIKNELTSENREAIELYPAA  101
+            + ++K  ++DW + W+  N+ T E    +E Y  A
+Sbjct  349  EHMQKREQNDWFKKWKHINDKTKETLREVEAYDTA  383
+
+
+
+Lambda     K      H
+   0.317    0.131    0.419 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 636213526
+
+
+Query= HHOT_0015
+
+Length=73
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|Q3A550|LPXB_PELCD  Lipid-A-disaccharide synthase OS=Pelobacter...  27.7    1.1  
+sp|P05656|SACC_BACSU  Levanase OS=Bacillus subtilis GN=sacC PE=1 ...  25.8    4.0  
+tr|Q0VRN0|Q0VRN0_ALCBS  N-methylhydantoinase B, putative OS=Alcan...  25.0    7.0  
+sp|Q27451|PRP1_BOMMO  Phenoloxidase subunit 1 OS=Bombyx mori PE=1...  25.0    7.1  
+sp|O83460|ISPG_TREPA  4-hydroxy-3-methylbut-2-en-1-yl diphosphate...  24.6    8.1  
+
+
+>sp|Q3A550|LPXB_PELCD Lipid-A-disaccharide synthase OS=Pelobacter carbinolicus (strain 
+DSM 2380 / Gra Bd 1) GN=lpxB PE=3 SV=1 # UNIPROT # Q3A550 
+# LIPIDADISACCHARIDESYNTH-RXN # PCAR338963:PCAR_1258-MONOMER 
+#  2.4.1.182
+Length=392
+
+ Score = 27.7 bits (60),  Expect = 1.1, Method: Composition-based stats.
+ Identities = 13/41 (32%), Positives = 21/41 (52%), Gaps = 0/41 (0%)
+
+Query  2    ITIPLVQMYYIAPACGIVQKKFPRRRRIGKGETVGGRGLVQ  42
+            +  P+  +Y +AP    + K+  R   IG    V GRG+V+
+Sbjct  285  VGTPMAIVYKMAPLSFAIGKRLIRVPHIGLANIVAGRGVVK  325
+
+
+>sp|P05656|SACC_BACSU Levanase OS=Bacillus subtilis GN=sacC PE=1 SV=1 # UNIPROT # P05656 
+# RXN-1841 # BSUB:BSU27030-MONOMER #  3.2.1.80
+Length=677
+
+ Score = 25.8 bits (55),  Expect = 4.0, Method: Composition-based stats.
+ Identities = 11/27 (41%), Positives = 15/27 (56%), Gaps = 0/27 (0%)
+
+Query  20   QKKFPRRRRIGKGETVGGRGLVQFVAD  46
+            QKK+  +  +G G   GG G+  FV D
+Sbjct  238  QKKWVMQVSVGNGAVSGGSGMQYFVGD  264
+
+
+>tr|Q0VRN0|Q0VRN0_ALCBS N-methylhydantoinase B, putative OS=Alcanivorax borkumensis (strain 
+SK2 / ATCC 700651 / DSM 11573) GN=hyuB PE=4 SV=1 # UNIPROT 
+# Q0VRN0 # 3.5.2.14-RXN # ABOR393595:ABO_0720-MONOMER 
+#  3.5.2.14
+Length=497
+
+ Score = 25.0 bits (53),  Expect = 7.0, Method: Composition-based stats.
+ Identities = 12/30 (40%), Positives = 19/30 (64%), Gaps = 3/30 (10%)
+
+Query  25   RRRRIGKGETVGGRGLV---QFVADIRIII  51
+            RR   G G+ +GG GLV   +F+AD ++ +
+Sbjct  408  RRGSGGSGQFMGGEGLVRELEFLADAQVTL  437
+
+
+>sp|Q27451|PRP1_BOMMO Phenoloxidase subunit 1 OS=Bombyx mori PE=1 SV=2 # UNIPROT # 
+Q27451 # MONOPHENOL-MONOOXYGENASE-RXN # #  1.14.18.1
+Length=685
+
+ Score = 25.0 bits (53),  Expect = 7.1, Method: Composition-based stats.
+ Identities = 9/18 (50%), Positives = 12/18 (67%), Gaps = 0/18 (0%)
+
+Query  13   APACGIVQKKFPRRRRIG  30
+            A  CGI  +K+P RR +G
+Sbjct  627  ASYCGIRDRKYPDRRAMG  644
+
+
+>sp|O83460|ISPG_TREPA 4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase OS=Treponema 
+pallidum GN=ispG PE=3 SV=1 # UNIPROT # O83460 # RXN0-882 
+# TPAL243276:TP_0446-MONOMER #  1.17.7.1
+Length=404
+
+ Score = 24.6 bits (52),  Expect = 8.1, Method: Composition-based stats.
+ Identities = 15/41 (37%), Positives = 21/41 (52%), Gaps = 2/41 (4%)
+
+Query  32   GETVGGRGLVQFVADIRIIINLHTFVKRWT--VYDTGKDKT  70
+            G+  GG  LV      RI  ++H FV+RW   ++   KD T
+Sbjct  299  GKRAGGVRLVSCPRCGRIGFDVHAFVRRWQKELFSLKKDIT  339
+
+
+
+Lambda     K      H
+   0.328    0.145    0.454 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 218642396
+
+
+Query= HHOT_0016
+
+Length=61
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|P39518|LCF2_YEAST  Long-chain-fatty-acid--CoA ligase 2 OS=Sacc...  24.3       10
+sp|Q54VI3|GLUD2_DICDI  Glutamate dehydrogenase 2 OS=Dictyostelium...  24.3       11
+sp|Q49XM4|ODO2_STAS1  Dihydrolipoyllysine-residue succinyltransfe...  23.9       13
+sp|Q88UW5|GSHAB_LACPL  Glutathione biosynthesis bifunctional prot...  23.5       17
+sp|Q2N7X8|DAPE_ERYLH  Succinyl-diaminopimelate desuccinylase OS=E...  23.5       19
+
+
+>sp|P39518|LCF2_YEAST Long-chain-fatty-acid--CoA ligase 2 OS=Saccharomyces cerevisiae 
+(strain ATCC 204508 / S288c) GN=FAA2 PE=1 SV=1 # UNIPROT 
+# P39518 # RXN-7904 # #  6.2.1.3
+Length=744
+
+ Score = 24.3 bits (51),  Expect =    10, Method: Compositional matrix adjust.
+ Identities = 11/31 (36%), Positives = 17/31 (55%), Gaps = 0/31 (0%)
+
+Query  6    VPEKLHNIVMGIIILITTDIDRKYDKAKFIV  36
+            V ++ HNI  GI+ L+ T   R  +   F+V
+Sbjct  136  VSKRCHNIGSGILSLVNTKRKRPLEANDFVV  166
+
+
+ Score = 20.0 bits (40),  Expect =   202, Method: Compositional matrix adjust.
+ Identities = 9/17 (53%), Positives = 11/17 (65%), Gaps = 0/17 (0%)
+
+Query  8    EKLHNIVMGIIILITTD  24
+            EKLHNI +G+  L   D
+Sbjct  691  EKLHNIKVGLEPLTLED  707
+
+
+>sp|Q54VI3|GLUD2_DICDI Glutamate dehydrogenase 2 OS=Dictyostelium discoideum GN=glud2 
+PE=1 SV=2 # UNIPROT # Q54VI3 # GLUTAMATE-DEHYDROGENASE-RXN 
+# #  1.4.1.2
+Length=1042
+
+ Score = 24.3 bits (51),  Expect =    11, Method: Composition-based stats.
+ Identities = 14/50 (28%), Positives = 25/50 (50%), Gaps = 3/50 (6%)
+
+Query  10   LHNIVMGIIILITTDIDRKYDKAKFIVESESINLSDNEIKLAKSKALSII  59
+            +H  V+G +  +  +   + D  KF       +L  NEIK++K K + I+
+Sbjct  693  IHQYVLGTLAKLGRN---EADCTKFQTGGPDGDLGSNEIKISKDKTIGIV  739
+
+
+ Score = 20.8 bits (42),  Expect =   117, Method: Composition-based stats.
+ Identities = 7/24 (30%), Positives = 17/24 (71%), Gaps = 0/24 (0%)
+
+Query  27   RKYDKAKFIVESESINLSDNEIKL  50
+            R +DK+K   +   +++++N++KL
+Sbjct  767  RYFDKSKLSPQGFFVDVAENDVKL  790
+
+
+>sp|Q49XM4|ODO2_STAS1 Dihydrolipoyllysine-residue succinyltransferase component of 
+2-oxoglutarate dehydrogenase complex OS=Staphylococcus saprophyticus 
+subsp. saprophyticus (strain ATCC 15305 / DSM 20229) 
+GN=odhB PE=3 SV=1 # UNIPROT # Q49XM4 # RXN0-1147 # SSAP342451:SSP1326-MONOMER 
+#  2.3.1.61
+Length=424
+
+ Score = 23.9 bits (50),  Expect =    13, Method: Compositional matrix adjust.
+ Identities = 14/40 (35%), Positives = 19/40 (48%), Gaps = 0/40 (0%)
+
+Query  1   MIEIDVPEKLHNIVMGIIILITTDIDRKYDKAKFIVESES  40
+           M E+ VPE   +I  G I      +    DK + IVE E+
+Sbjct  1   MPEVKVPELAESITEGTIAEWLKQVGDSVDKGEAIVELET  40
+
+
+>sp|Q88UW5|GSHAB_LACPL Glutathione biosynthesis bifunctional protein gshAB OS=Lactobacillus 
+plantarum GN=gshAB PE=3 SV=1 # UNIPROT # Q88UW5 # GLUTCYSLIG-RXN 
+# LPLA220668:LP_2336-MONOMER #  6.3.2.3 6.3.2.2
+Length=751
+
+ Score = 23.5 bits (49),  Expect =    17, Method: Composition-based stats.
+ Identities = 11/46 (24%), Positives = 24/46 (53%), Gaps = 4/46 (8%)
+
+Query  6    VPEKLHNIVMGIIILIT----TDIDRKYDKAKFIVESESINLSDNE  47
+            +P+ L N+ +  +  ++     D+ RKY+  + +     +N+S NE
+Sbjct  109  LPDDLTNVPLADVDQVSYQRRRDLARKYELQRLMTTGSHVNMSLNE  154
+
+
+>sp|Q2N7X8|DAPE_ERYLH Succinyl-diaminopimelate desuccinylase OS=Erythrobacter litoralis 
+(strain HTCC2594) GN=dapE PE=3 SV=1 # UNIPROT # Q2N7X8 
+# SUCCDIAMINOPIMDESUCC-RXN # ELIT314225:ELI_10605-MONOMER # 
+ 3.5.1.18
+Length=378
+
+ Score = 23.5 bits (49),  Expect =    19, Method: Composition-based stats.
+ Identities = 7/14 (50%), Positives = 11/14 (79%), Gaps = 0/14 (0%)
+
+Query  1    MIEIDVPEKLHNIV  14
+            + EIDVP + HN++
+Sbjct  238  ITEIDVPNRAHNVI  251
+
+
+
+Lambda     K      H
+   0.318    0.138    0.355 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 217551285
+
+
+Query= HHOT_0017
+
+Length=99
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|Q03U68|SYE1_LACBA  Glutamyl-tRNA synthetase 1 OS=Lactobacillus...  30.4    0.16 
+sp|Q489P3|ASSY_COLP3  Argininosuccinate synthase OS=Colwellia psy...  26.9    1.8  
+sp|Q3ING1|HEM1_NATPD  Glutamyl-tRNA reductase OS=Natronomonas pha...  25.8    3.7  
+sp|Q54X95|SYMC_DICDI  Probable methionyl-tRNA synthetase, cytopla...  23.9       15
+sp|Q04F71|SYGA_OENOB  Glycyl-tRNA synthetase alpha subunit OS=Oen...  23.9       15
+
+
+>sp|Q03U68|SYE1_LACBA Glutamyl-tRNA synthetase 1 OS=Lactobacillus brevis (strain ATCC 
+367 / JCM 1170) GN=gltX1 PE=3 SV=1 # UNIPROT # Q03U68 # GLURS-RXN 
+# LBRE387344:LVIS_0080-MONOMER #  6.1.1.17
+Length=503
+
+ Score = 30.4 bits (67),  Expect = 0.16, Method: Composition-based stats.
+ Identities = 21/59 (36%), Positives = 27/59 (46%), Gaps = 5/59 (8%)
+
+Query  15   IHQLERISQKELFKVTIMPKPSNTPDVPNGSRKSTSAGLLIFSDGDDRRTAAKYPSSVA  73
+            IHQL  I  K LF VTI+ +P +   +    R +T A L  F     R+     P  VA
+Sbjct  388  IHQLSEIMDKVLFYVTILQEPLDYDQLRQFDRTATLAVLTAF-----RKHVQALPVDVA  441
+
+
+>sp|Q489P3|ASSY_COLP3 Argininosuccinate synthase OS=Colwellia psychrerythraea (strain 
+34H / ATCC BAA-681) GN=argG PE=3 SV=1 # UNIPROT # Q489P3 
+# ARGSUCCINSYN-RXN # CPSY167879:CPS_0463-MONOMER #  6.3.4.5
+Length=418
+
+ Score = 26.9 bits (58),  Expect = 1.8, Method: Composition-based stats.
+ Identities = 14/38 (37%), Positives = 21/38 (56%), Gaps = 2/38 (5%)
+
+Query  24   KELFKVTIMPKPSNTPDVPNGSRKSTSAGLLIFSDGDD  61
+            KE++ +T+   P + PDVP   + S   G L+  DG D
+Sbjct  207  KEVWTMTV--DPMDAPDVPEKVQLSFKEGELVGIDGKD  242
+
+
+>sp|Q3ING1|HEM1_NATPD Glutamyl-tRNA reductase OS=Natronomonas pharaonis (strain DSM 
+2160 / ATCC 35678) GN=hemA PE=3 SV=1 # UNIPROT # Q3ING1 # GLUTRNAREDUCT-RXN 
+# NPHA348780:NP4502A-MONOMER #  1.2.1.70
+Length=453
+
+ Score = 25.8 bits (55),  Expect = 3.7, Method: Composition-based stats.
+ Identities = 16/45 (36%), Positives = 24/45 (54%), Gaps = 8/45 (17%)
+
+Query  25   ELFKVTIMPKPSNTPDVPNGS-------RKSTSAGLL-IFSDGDD  61
+            +LF   + P+P+  P VP+G        R+  S+G+L  FS  DD
+Sbjct  409  QLFGPGLEPEPTELPTVPDGPEGVPEELRERMSSGMLEQFSTNDD  453
+
+
+>sp|Q54X95|SYMC_DICDI Probable methionyl-tRNA synthetase, cytoplasmic OS=Dictyostelium 
+discoideum GN=metS PE=3 SV=1 # UNIPROT # Q54X95 # METHIONINE--TRNA-LIGASE-RXN 
+# #  6.1.1.10
+Length=736
+
+ Score = 23.9 bits (50),  Expect =    15, Method: Composition-based stats.
+ Identities = 10/16 (63%), Positives = 12/16 (75%), Gaps = 1/16 (6%)
+
+Query  32  MPKPSNTPDVP-NGSR  46
+           M KPSNTP +P +G R
+Sbjct  1   MSKPSNTPPLPKDGER  16
+
+
+>sp|Q04F71|SYGA_OENOB Glycyl-tRNA synthetase alpha subunit OS=Oenococcus oeni (strain 
+BAA-331 / PSU-1) GN=glyQ PE=3 SV=1 # UNIPROT # Q04F71 # GLYCINE--TRNA-LIGASE-RXN 
+# #  6.1.1.14
+Length=319
+
+ Score = 23.9 bits (50),  Expect =    15, Method: Composition-based stats.
+ Identities = 10/30 (34%), Positives = 15/30 (50%), Gaps = 0/30 (0%)
+
+Query  16  HQLERISQKELFKVTIMPKPSNTPDVPNGS  45
+           H   R+ Q   F+V + P P N  ++  GS
+Sbjct  70  HNPNRLFQHHQFQVVMKPSPENIQELYLGS  99
+
+
+
+Lambda     K      H
+   0.320    0.134    0.374 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 217974750
+
+
+Query= HHOT_0018
+
+Length=179
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|B7GIC0|DAPEL_ANOFW  N-acetyldiaminopimelate deacetylase OS=Ano...  28.5    1.7  
+sp|Q0VML5|SYC_ALCBS  Cysteinyl-tRNA synthetase OS=Alcanivorax bor...  28.1    1.9  
+sp|Q9C102|GLT1_SCHPO  Putative glutamate synthase [NADPH] OS=Schi...  27.7    2.4  
+sp|Q4R755|GPDM_MACFA  Glycerol-3-phosphate dehydrogenase, mitocho...  27.3    4.0  
+sp|O34399|GLTB_BACSU  Glutamate synthase [NADPH] small chain OS=B...  26.9    5.0  
+
+
+>sp|B7GIC0|DAPEL_ANOFW N-acetyldiaminopimelate deacetylase OS=Anoxybacillus flavithermus 
+(strain DSM 21510 / WK1) GN=Aflv_1903 PE=3 SV=2 # UNIPROT 
+# B7GIC0 # N-ACETYLDIAMINOPIMELATE-DEACETYLASE-RXN # #  3.5.1.47
+Length=378
+
+ Score = 28.5 bits (62),  Expect = 1.7, Method: Compositional matrix adjust.
+ Identities = 20/81 (25%), Positives = 40/81 (50%), Gaps = 5/81 (6%)
+
+Query  40   LPLMIMDVGGEWLGGLVLVAGLA-----ALMSTMDSQLLATGSLVTRDLVPKGDSEGWPR  94
+            LP++  D   +W+  ++L   +A       ++T +  L A  S +  DL+ KG    +P 
+Sbjct  130  LPMLESDEMKQWMPDMILALHIAPAYPVGTIATKEGLLFANTSELFIDLIGKGGHAAFPH  189
+
+Query  95   ESVIVSLAVLGLLLSLWSDLS  115
+            E+  + +A   L++ L + +S
+Sbjct  190  ETKDMVVAASSLIMQLQTIVS  210
+
+
+>sp|Q0VML5|SYC_ALCBS Cysteinyl-tRNA synthetase OS=Alcanivorax borkumensis (strain 
+SK2 / ATCC 700651 / DSM 11573) GN=cysS PE=3 SV=1 # UNIPROT # 
+Q0VML5 # CYSTEINE--TRNA-LIGASE-RXN # ABOR393595:ABO_2135-MONOMER 
+#  6.1.1.16
+Length=460
+
+ Score = 28.1 bits (61),  Expect = 1.9, Method: Compositional matrix adjust.
+ Identities = 12/47 (26%), Positives = 25/47 (54%), Gaps = 0/47 (0%)
+
+Query  124  FSMYAVMFPSVFSASHFDDIDGRAVIASIAAGESVVLLAYFSPESFA  170
+            + +   ++P+V  A +  DID + + A+   GE++  L     ++FA
+Sbjct  52   YRLLQRLYPNVVYARNITDIDDKIIKAAADNGEAISTLTERFTQAFA  98
+
+
+>sp|Q9C102|GLT1_SCHPO Putative glutamate synthase [NADPH] OS=Schizosaccharomyces pombe 
+(strain ATCC 38366 / 972) GN=SPAPB1E7.07 PE=2 SV=1 # UNIPROT 
+# Q9C102 # GLUTAMATESYN-RXN # SPOM-XXX-01:SPOM-XXX-01-001756-MONOMER 
+#  1.4.1.13
+Length=2111
+
+ Score = 27.7 bits (60),  Expect = 2.4, Method: Composition-based stats.
+ Identities = 15/32 (47%), Positives = 20/32 (63%), Gaps = 1/32 (3%)
+
+Query  61    LAALMSTMDSQLLATGSLVTRDL-VPKGDSEG  91
+             L  L    D+ +LA+GS V RDL +P  DS+G
+Sbjct  1836  LDELHKVYDAVVLASGSTVPRDLPIPNRDSKG  1867
+
+
+>sp|Q4R755|GPDM_MACFA Glycerol-3-phosphate dehydrogenase, mitochondrial OS=Macaca fascicularis 
+GN=GPD2 PE=2 SV=1 # UNIPROT # Q4R755 # RXN0-5260 
+# #  1.1.5.3
+Length=727
+
+ Score = 27.3 bits (59),  Expect = 4.0, Method: Composition-based stats.
+ Identities = 15/39 (39%), Positives = 19/39 (49%), Gaps = 1/39 (2%)
+
+Query  132  PSVFSASHFDDIDGRAVIASIAAGESVVLLAYFSPESFA  170
+            P   S    DD D  A I   +AG  +V+  Y+SPES  
+Sbjct  292  PFTDSVRKMDDKDA-AAICQPSAGVHIVMPGYYSPESMG  329
+
+
+>sp|O34399|GLTB_BACSU Glutamate synthase [NADPH] small chain OS=Bacillus subtilis GN=gltB 
+PE=2 SV=2 # UNIPROT # O34399 # GLUTAMATESYN-RXN # BSUB:BSU18440-MONOMER 
+#  1.4.1.13
+Length=493
+
+ Score = 26.9 bits (58),  Expect = 5.0, Method: Compositional matrix adjust.
+ Identities = 18/56 (33%), Positives = 28/56 (50%), Gaps = 1/56 (1%)
+
+Query  64   LMSTMDSQLLATGSLVTRDLVPKG-DSEGWPRESVIVSLAVLGLLLSLWSDLSILD  118
+            L    D+ +L TG+   RDL+ +G DS+G       ++LA    L S + D   +D
+Sbjct  234  LKEQFDAVILCTGAQKQRDLLIEGRDSKGVHYAMDYLTLATKSYLDSNFKDKQFID  289
+
+
+
+Lambda     K      H
+   0.322    0.140    0.428 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 595604152
+
+
+Query= HHOT_0019
+
+Length=183
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|A6Q2R6|AROA_NITSB  3-phosphoshikimate 1-carboxyvinyltransferas...  28.1    2.2  
+tr|O04353|O04353_BOROF  Delta 6 desaturase OS=Borago officinalis ...  27.7    2.6  
+sp|Q9NPH0|PPA6_HUMAN  Lysophosphatidic acid phosphatase type 6 OS...  27.7    2.9  
+sp|Q1MRM1|SYGB_LAWIP  Glycyl-tRNA synthetase beta subunit OS=Laws...  27.3    3.5  
+sp|P49587|PCY1_PLAFK  Choline-phosphate cytidylyltransferase OS=P...  27.3    3.8  
+
+
+>sp|A6Q2R6|AROA_NITSB 3-phosphoshikimate 1-carboxyvinyltransferase OS=Nitratiruptor 
+sp. (strain SB155-2) GN=aroA PE=3 SV=1 # UNIPROT # A6Q2R6 # 
+2.5.1.19-RXN # NSP387092:NIS_0661-MONOMER #  2.5.1.19
+Length=433
+
+ Score = 28.1 bits (61),  Expect = 2.2, Method: Compositional matrix adjust.
+ Identities = 16/40 (40%), Positives = 22/40 (55%), Gaps = 1/40 (2%)
+
+Query  8    GEGSPYSGDYSRVGDER-LTALGANLRTNWSRGPWSFEGV  46
+            GE S    + SR   ER L  +GAN+ T+WS G +  + V
+Sbjct  183  GECSISEPELSRDHTERMLQGMGANIDTHWSHGRYRVDVV  222
+
+
+>tr|O04353|O04353_BOROF Delta 6 desaturase OS=Borago officinalis PE=2 SV=1 # UNIPROT 
+# O04353 # RXN-8343 # MetaCyc:MONOMER-14126 #  NIL
+Length=448
+
+ Score = 27.7 bits (60),  Expect = 2.6, Method: Compositional matrix adjust.
+ Identities = 21/86 (25%), Positives = 32/86 (38%), Gaps = 17/86 (19%)
+
+Query  14   SGDYSRVGDERLTAL----GANLRTNWSRGPWSFEGVLAWEYNDREAVL-------DIDS  62
+            +G Y  V D RL        AN  +  S G W       W +N             D+  
+Sbjct  161  AGHYMVVSDSRLNKFMGIFAANCLSGISIGWWK------WNHNAHHIACNSLEYDPDLQY  214
+
+Query  63   SPFIAAETLYEDTSDEYFGDARLTWD  88
+             PF+   + +  +   +F + RLT+D
+Sbjct  215  IPFLVVSSKFFGSLTSHFYEKRLTFD  240
+
+
+>sp|Q9NPH0|PPA6_HUMAN Lysophosphatidic acid phosphatase type 6 OS=Homo sapiens GN=ACP6 
+PE=1 SV=2 # UNIPROT # Q9NPH0 # RXNQT-4191 # #  3.1.3.2 3.1.3.2
+Length=428
+
+ Score = 27.7 bits (60),  Expect = 2.9, Method: Compositional matrix adjust.
+ Identities = 10/28 (36%), Positives = 19/28 (68%), Gaps = 0/28 (0%)
+
+Query  9    EGSPYSGDYSRVGDERLTALGANLRTNW  36
+            +G  ++G  ++VG +++ ALG  LR N+
+Sbjct  116  KGGMFAGQLTKVGMQQMFALGERLRKNY  143
+
+
+>sp|Q1MRM1|SYGB_LAWIP Glycyl-tRNA synthetase beta subunit OS=Lawsonia intracellularis 
+(strain PHE/MN1-00) GN=glyS PE=3 SV=1 # UNIPROT # Q1MRM1 
+# GLYCINE--TRNA-LIGASE-RXN # LINT363253:LI0299-MONOMER #  6.1.1.14
+Length=695
+
+ Score = 27.3 bits (59),  Expect = 3.5, Method: Composition-based stats.
+ Identities = 18/56 (33%), Positives = 25/56 (45%), Gaps = 4/56 (7%)
+
+Query  10   GSPYSGDYSRVGDERLTALGANLRTNWSRGPWSFEGVLAWEYNDREAVLDIDSSPF  65
+            G P     +R+  E +TAL    R  W   P++F   + W      A+LD D  PF
+Sbjct  122  GIPTKEVLARLCPEIITALPLPKRMRWGNNPFTFIRPIRWIM----ALLDSDIVPF  173
+
+
+>sp|P49587|PCY1_PLAFK Choline-phosphate cytidylyltransferase OS=Plasmodium falciparum 
+(isolate K1 / Thailand) GN=CTP PE=2 SV=1 # UNIPROT # P49587 
+# 2.7.7.15-RXN # #  2.7.7.15
+Length=370
+
+ Score = 27.3 bits (59),  Expect = 3.8, Method: Compositional matrix adjust.
+ Identities = 17/58 (30%), Positives = 25/58 (44%), Gaps = 4/58 (6%)
+
+Query  88   DDDLGVSIMLGATGLYDRLGAYNTIWINPSSYLFQDITQK----TYYFALFGYVDFEI  141
+            D  LG     G   L  +      IW N S+ L  D T+K    +Y  ++   +D+EI
+Sbjct  297  DKPLGTDFDQGVENLQVKFKELFKIWKNASNKLITDFTRKLEATSYLTSIQNIIDYEI  354
+
+
+
+Lambda     K      H
+   0.316    0.136    0.420 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+Effective search space used: 622677068
+
+
+Query= HHOT_0020
+
+Length=65
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|P32191|GPDM_YEAST  Glycerol-3-phosphate dehydrogenase, mitocho...  27.3    1.3  
+sp|B1HUK4|SYA_LYSSC  Alanyl-tRNA synthetase OS=Lysinibacillus sph...  26.6    2.0  
+sp|P52197|THTR_AZOVI  Thiosulfate sulfurtransferase OS=Azotobacte...  25.4    5.3  
+sp|P26612|AMY2_ECOLI  Cytoplasmic alpha-amylase OS=Escherichia co...  25.0    7.3  
+sp|Q41233|ALLN2_ALLSA  Alliin lyase 2 OS=Allium sativum PE=1 SV=1...  24.3       12
+
+
+>sp|P32191|GPDM_YEAST Glycerol-3-phosphate dehydrogenase, mitochondrial OS=Saccharomyces 
+cerevisiae (strain ATCC 204508 / S288c) GN=GUT2 PE=1 SV=2 
+# UNIPROT # P32191 # RXN0-5260 # #  1.1.5.3
+Length=649
+
+ Score = 27.3 bits (59),  Expect = 1.3, Method: Compositional matrix adjust.
+ Identities = 14/38 (37%), Positives = 19/38 (50%), Gaps = 0/38 (0%)
+
+Query  21   KFHSTFHGGQNFGKDTVLSESAASHPVNLGTRGDSKGS  58
+            KF+  F G QN  K  +LS+SA      + T  + K S
+Sbjct  176  KFYDFFAGSQNLKKSYLLSKSATVEKAPMLTTDNLKAS  213
+
+
+>sp|B1HUK4|SYA_LYSSC Alanyl-tRNA synthetase OS=Lysinibacillus sphaericus (strain C3-41) 
+GN=alaS PE=3 SV=2 # UNIPROT # B1HUK4 # ALANINE--TRNA-LIGASE-RXN 
+# LSPH444177:BSPH_3873-MONOMER #  6.1.1.7
+Length=908
+
+ Score = 26.6 bits (57),  Expect = 2.0, Method: Composition-based stats.
+ Identities = 11/28 (40%), Positives = 15/28 (54%), Gaps = 0/28 (0%)
+
+Query  18   EELKFHSTFHGGQNFGKDTVLSESAASH  45
+            EE++FH T  GG     +   S+ AA H
+Sbjct  387  EEIRFHETLDGGLAIFNEVAESQKAAGH  414
+
+
+>sp|P52197|THTR_AZOVI Thiosulfate sulfurtransferase OS=Azotobacter vinelandii GN=rhdA 
+PE=1 SV=1 # UNIPROT # P52197 # THIOSULFATE-SULFURTRANSFERASE-RXN 
+# MetaCyc:MONOMER-12548 #  2.8.1.1
+Length=271
+
+ Score = 25.4 bits (54),  Expect = 5.3, Method: Composition-based stats.
+ Identities = 8/18 (45%), Positives = 12/18 (67%), Gaps = 0/18 (0%)

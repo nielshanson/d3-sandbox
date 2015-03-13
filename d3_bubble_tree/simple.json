@@ -1,0 +1,14 @@
+{
+	"name": "root",
+	"children": [
+	{
+	  "name": "eukaryotes"
+	},
+	{
+	  "name": "prokaryotes",
+	  "children": [
+        {"name": "Bacteria", "size": 3938},
+        {"name": "Archaea", "size": 3812}
+	  ]
+	}]
+}

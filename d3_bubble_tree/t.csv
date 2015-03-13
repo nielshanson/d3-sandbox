@@ -1,0 +1,109 @@
+{
+   "name": "root",
+   "children": [
+      {
+         "name": "cellular organisms",
+         "children": [
+            {
+               "name": "Bacteria",
+               "children": [
+                  {
+                     "values": {
+                        "Bt": "4",
+                        "C-Surface": "2",
+                        "N-surface": "1",
+                        "Mid": "3"
+                     },
+                     "name": "Proteobacteria",
+                     "children": [
+                        {
+                           "name": "Alphaproteobacteria",
+                           "children": [
+                              {
+                                 "values": {
+                                    "Bt": "20",
+                                    "C-Surface": "37",
+                                    "N-surface": "24",
+                                    "Mid": "12"
+                                 },
+                                 "name": "Rhizobiales"
+                              },
+                              {
+                                 "values": {
+                                    "Bt": "6",
+                                    "C-Surface": "21",
+                                    "N-surface": "18",
+                                    "Mid": "8"
+                                 },
+                                 "name": "Rhodospirillales"
+                              },
+                              {
+                                 "values": {
+                                    "Bt": "1",
+                                    "C-Surface": "43",
+                                    "N-surface": "4",
+                                    "Mid": "0"
+                                 },
+                                 "name": "Other"
+                              }
+                           ]
+                        },
+                        {
+                           "name": "Betaproteobacteria",
+                           "children": [
+                              {
+                                 "values": {
+                                    "Bt": "1",
+                                    "C-Surface": "13",
+                                    "N-surface": "6",
+                                    "Mid": "0"
+                                 },
+                                 "name": "Burkholderiales"
+                              },
+                              {
+                                 "values": {
+                                    "Bt": "5",
+                                    "C-Surface": "3",
+                                    "N-surface": "3",
+                                    "Mid": "1"
+                                 },
+                                 "name": "Nitrosomonadales"
+                              },
+                              {
+                                 "values": {
+                                    "Bt": "9",
+                                    "C-Surface": "2",
+                                    "N-surface": "1",
+                                    "Mid": "1"
+                                 },
+                                 "name": "Other"
+                              }
+                           ]
+                        },
+                        {
+                           "name": "delta/epsilon subdivisions",
+                           "children": [
+                              {
+                                 "name": "Deltaproteobacteria",
+                                 "children": [
+                                    {
+                                       "values": {
+                                          "Bt": "12",
+                                          "C-Surface": "0",
+                                          "N-surface": "0",
+                                          "Mid": "1"
+                                       },
+                                       "name": "Desulfuromonadales"
+                                    }
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

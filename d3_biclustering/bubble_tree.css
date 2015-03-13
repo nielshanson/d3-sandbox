@@ -1,0 +1,75 @@
+
+path.slice{
+	stroke-width:2px;
+}
+
+.node circle {
+  cursor: pointer;
+  fill: #fff;
+  stroke: #888C93;
+  stroke-width: 1.5px;
+}
+
+.xnode circle {
+  cursor: pointer;
+  fill: #fff;
+  stroke: #888C93;
+  stroke-width: 1.5px;
+}
+
+.ynode circle {
+  cursor: pointer;
+  fill: #fff;
+  stroke: #888C93;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font-size: 10px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.xnode text {
+  font-size: 10px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+.ynode text {
+  font-size: 10px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+path.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+path.xlink {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+path.ylink {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+.legend circle {
+  fill: none;
+  stroke: #ccc;
+}
+
+.legend text {
+  fill: #777;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.color_legend text {
+  fill: #777;
+  font: 10px sans-serif;
+  text-anchor: start;
+}
+
