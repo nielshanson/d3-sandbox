@@ -1,4 +1,4 @@
 d3-sandbox
 ==========
 
-experimental area for d3 plots
+Experimental area for [d3.js](http://d3js.org/) stuff.
